@@ -1,0 +1,2 @@
+<h1>AJAX Test!</h1>
+<p>This is a simple plain text file (with some HTML markup) which we can import into TopBox via AJAX.</p>

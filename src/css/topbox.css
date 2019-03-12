@@ -1,0 +1,444 @@
+/*
+TopBox is derived from Nivo Lightbox v1.3.1, created by Dev7studios:
+http://dev7studios.com/nivo-lightbox
+
+TopBox is updated for jQuery 3 and has additional features / content support.
+Maintained by William Woodgate
+
+TopBox homepage:
+https://willwoodgate.com/projects/topbox/
+
+Free to use and abuse under the MIT license.
+http://www.opensource.org/licenses/mit-license.php
+*/
+/* Core CSS to make the lightbox work */
+.topbox_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99995;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.topbox_overlay,
+.topbox_overlay *,
+.topbox_overlay *:before,
+.topbox_overlay *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.topbox_fill {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.topbox_overlay.topbox_open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.topbox_wrapper {
+  position: absolute;
+  z-index: 99996;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.topbox_content {
+  width: auto;
+  height: auto;
+  position: relative;
+  z-index: 99998;
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+}
+
+.topbox_title_wrap {
+  position: relative;
+  z-index: 99998;
+}
+
+.topbox_loading_message {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.topbox_loading .topbox_loading_message {
+  display: block;
+}
+
+.topbox_nav {
+  display: none;
+}
+
+.topbox_prev,
+.topbox_next,
+.topbox_close {
+  position: absolute;
+  z-index: 99999;
+}
+
+.topbox_prev {
+  left: 0;
+}
+
+.topbox_next {
+  right: 0;
+}
+
+.topbox_close {
+  top: 0;
+  right: 0;
+}
+
+.topbox_close_layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99997;
+}
+
+.topbox_image {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  position: relative;
+  margin: auto;
+}
+
+.topbox_html5_audio_wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.topbox_html5audio {
+  width: 100%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: block;
+}
+
+.topbox_html5_video_wrap {
+  width: 100%;
+}
+
+.topbox_html5video {
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.topbox_iframe_wrap,
+.topbox_iframe,
+.topbox_pdf_wrap,
+.topbox_pdf {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.topbox_embedded_web_video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.topbox_embedded_web_video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+Fix for video sizing, if using the Plyr plugin for custom video controls
+https://github.com/sampotts/plyr
+*/
+.topbox_content .plyr {
+  min-width: 100%;
+}
+
+.topbox_inline,
+.topbox_ajax {
+  max-height: 100%;
+  width: 100%;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* https://bugzilla.mozilla.org/show_bug.cgi?id=308801 */
+}
+
+.topbox_error {
+  display: table;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-shadow: 0 1px 1px #000;
+}
+
+.topbox_error p {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* Effects */
+.topbox_notouch .topbox_effect_fade,
+.topbox_notouch .topbox_effect_fadeScale,
+.topbox_notouch .topbox_effect_slideLeft,
+.topbox_notouch .topbox_effect_slideRight,
+.topbox_notouch .topbox_effect_slideUp,
+.topbox_notouch .topbox_effect_slideDown,
+.topbox_notouch .topbox_effect_fall {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/* fadeScale */
+.topbox_effect_fadeScale .topbox_wrap {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+}
+
+.topbox_effect_fadeScale.topbox_open .topbox_wrap {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+/* slideLeft / slideRight / slideUp / slideDown */
+.topbox_effect_slideLeft .topbox_wrap,
+.topbox_effect_slideRight .topbox_wrap,
+.topbox_effect_slideUp .topbox_wrap,
+.topbox_effect_slideDown .topbox_wrap {
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  -ms-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+  transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+
+.topbox_effect_slideLeft .topbox_wrap {
+  -webkit-transform: translateX(-10%);
+  -moz-transform: translateX(-10%);
+  -ms-transform: translateX(-10%);
+  transform: translateX(-10%);
+}
+
+.topbox_effect_slideRight .topbox_wrap {
+  -webkit-transform: translateX(10%);
+  -moz-transform: translateX(10%);
+  -ms-transform: translateX(10%);
+  transform: translateX(10%);
+}
+
+.topbox_effect_slideLeft.topbox_open .topbox_wrap,
+.topbox_effect_slideRight.topbox_open .topbox_wrap {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.topbox_effect_slideDown .topbox_wrap {
+  -webkit-transform: translateY(-10%);
+  -moz-transform: translateY(-10%);
+  -ms-transform: translateY(-10%);
+  transform: translateY(-10%);
+}
+
+.topbox_effect_slideUp .topbox_wrap {
+  -webkit-transform: translateY(10%);
+  -moz-transform: translateY(10%);
+  -ms-transform: translateY(10%);
+  transform: translateY(10%);
+}
+
+.topbox_effect_slideUp.topbox_open .topbox_wrap,
+.topbox_effect_slideDown.topbox_open .topbox_wrap {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/* fall */
+.topbox_body-effect_fall .topbox_effect_fall {
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.topbox_effect_fall .topbox_wrap {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-transform: translateZ(300px);
+  -moz-transform: translateZ(300px);
+  -ms-transform: translateZ(300px);
+  transform: translateZ(300px);
+}
+
+.topbox_effect_fall.topbox_open .topbox_wrap {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* Our default lightbox skin (darkroom) */
+.topbox_open .topbox_blur_wrapper {
+  filter: blur(1px);
+}
+
+.topbox_skin_darkroom .topbox_fill {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.topbox_loading_message,
+.topbox_pdf_mobile_message {
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.topbox_skin_darkroom a.topbox_pdf_mobile_button,
+.topbox_skin_darkroom a.topbox_pdf_mobile_button:visited {
+  color: #FFFFFF;
+  border-radius: 1rem;
+  border: 2px solid #FFFFFF;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: all 300ms ease-in;
+  padding: 1rem;
+  line-height: 1;
+  display: block;
+  margin-top: 1rem;
+}
+
+.topbox_skin_darkroom a.topbox_pdf_mobile_button:hover,
+.topbox_skin_darkroom a.topbox_pdf_mobile_button:active {
+  opacity: 1;
+}
+
+.topbox_skin_darkroom .topbox_nav {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.topbox_skin_darkroom .topbox_prev,
+.topbox_skin_darkroom .topbox_next,
+.topbox_skin_darkroom .topbox_close {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 45px;
+  opacity: 0.5;
+  transition: all 300ms ease-in;
+  padding: 10px;
+  line-height: 1;
+}
+
+.topbox_skin_darkroom .topbox_close {
+  margin-top: -10px;
+}
+
+.topbox_skin_darkroom .topbox_prev:hover,
+.topbox_skin_darkroom .topbox_next:hover,
+.topbox_skin_darkroom .topbox_close:hover {
+  opacity: 1;
+}
+
+.topbox_skin_darkroom .topbox_prev:before {
+  content: "←"
+}
+
+.topbox_skin_darkroom .topbox_next:before {
+  content: "→"
+}
+
+.topbox_skin_darkroom .topbox_close:before {
+  content: "×";
+}
+
+.topbox_skin_darkroom .topbox_title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  background: #000;
+  color: #fff;
+  padding: 7px 15px;
+  margin-top: 7px;
+  border-radius: 30px;
+  text-align: center;
+  display: inline-block;
+}
+
+.topbox_skin_darkroom .topbox_image,
+.topbox_skin_darkroom .topbox_html5audio,
+.topbox_skin_darkroom .topbox_html5video,
+.topbox_skin_darkroom .topbox_video,
+.topbox_skin_darkroom .topbox_ajax,
+.topbox_skin_darkroom .topbox_inline {}
+
+.topbox_skin_darkroom .topbox_ajax,
+.topbox_skin_darkroom .topbox_inline {
+  background: #fff;
+  padding: 40px;
+}
