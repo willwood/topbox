@@ -1,0 +1,118 @@
+/* Our lightbox skin named 'mint' */
+
+.topbox_open .topbox_blur_wrapper {
+	filter: blur(1px);
+}
+
+.topbox_skin_mint .topbox_fill {
+	background: rgb(221,227,229);
+	background: linear-gradient(0deg, rgba(221,227,229,0.95) 0%, rgba(195,206,209,0.95) 100%);
+}
+
+.topbox_loading_message,
+.topbox_pdf_mobile_message {
+	color: rgb(145,145,145);
+	font-size: 18px;
+}
+
+.topbox_skin_mint a.topbox_pdf_mobile_button,
+.topbox_skin_mint a.topbox_pdf_mobile_button:visited {
+	color: rgb(145,145,145);
+	border-radius: 1rem;
+	border: 2px solid rgb(145,145,145);
+  text-decoration: none;
+  opacity: 0.5;
+  transition: all 300ms ease-in;
+  padding: 1rem;
+	line-height: 1;
+	display: block;
+	margin-top: 1rem;
+}
+
+.topbox_skin_mint a.topbox_pdf_mobile_button:hover,
+.topbox_skin_mint a.topbox_pdf_mobile_button:active {
+	opacity: 1;
+}
+
+.topbox_skin_mint .topbox_nav {
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.topbox_skin_mint .topbox_prev,
+.topbox_skin_mint .topbox_next,
+.topbox_skin_mint .topbox_close {
+	text-decoration: none;
+	font-size: 65px;
+	color: #ffffff;
+	background-color: #9FFBD3;
+	transition: all 300ms ease-in;
+	width: 65px;
+	height: 75px;
+	text-align: center;
+	line-height: 72px;
+	overflow: hidden;
+	display: block;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.5)
+}
+
+.topbox_skin_mint .topbox_close {
+	line-height: 65px;
+	margin-top: -5px;
+}
+
+.topbox_skin_mint .topbox_prev:hover,
+.topbox_skin_mint .topbox_next:hover,
+.topbox_skin_mint .topbox_close:hover {
+	color: #ffffff;
+}
+
+.topbox_skin_mint .topbox_prev:before {
+	content: "←"
+}
+
+.topbox_skin_mint .topbox_next:before {
+	content: "→"
+}
+
+.topbox_skin_mint .topbox_close:before {
+	content: "×";
+}
+
+.topbox_skin_mint .topbox_title {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	line-height: 65px;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: normal;
+	background: none;
+	color: #ffffff;
+	padding: 0 30px;
+	margin-top: 7px;
+	border-radius: 0px;
+	text-align: center;
+	display: inline-block;
+	color: #ffffff;
+	background-color: #9FFBD3;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.topbox_skin_mint .topbox_image,
+.topbox_skin_mint .topbox_html5audio,
+.topbox_skin_mint .topbox_html5video,
+.topbox_skin_mint .topbox_video,
+.topbox_skin_mint .topbox_ajax,
+.topbox_skin_mint .topbox_inline,
+.topbox_skin_mint .topbox_pdf {
+
+}
+
+.topbox_skin_mint .topbox_ajax,
+.topbox_skin_mint .topbox_inline {
+	background: #fff;
+	padding: 40px;
+}

@@ -1,11 +1,11 @@
-/* Our lightbox skin named 'galaxy' */
+/* Our lightbox skin named 'forest' */
 
 .topbox_open .topbox_blur_wrapper {
 	filter: blur(1px);
 }
- 
-.topbox_skin_galaxy .topbox_fill { 
-	background-image: url(galaxy.jpg);
+
+.topbox_skin_forest .topbox_fill {
+	background-image: url(forest.jpg);
 	background-size: cover;
 }
 
@@ -15,8 +15,8 @@
 	font-size: 18px;
 }
 
-.topbox_skin_galaxy a.topbox_pdf_mobile_button,
-.topbox_skin_galaxy a.topbox_pdf_mobile_button:visited {
+.topbox_skin_forest a.topbox_pdf_mobile_button,
+.topbox_skin_forest a.topbox_pdf_mobile_button:visited {
 	color: rgb(145,145,145);
 	border-radius: 1rem;
 	border: 2px solid rgb(145,145,145);
@@ -29,21 +29,21 @@
 	margin-top: 1rem;
 }
 
-.topbox_skin_galaxy a.topbox_pdf_mobile_button:hover,
-.topbox_skin_galaxy a.topbox_pdf_mobile_button:active {
+.topbox_skin_forest a.topbox_pdf_mobile_button:hover,
+.topbox_skin_forest a.topbox_pdf_mobile_button:active {
 	opacity: 1;
 }
 
-.topbox_skin_galaxy .topbox_nav {
+.topbox_skin_forest .topbox_nav {
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
 
-.topbox_skin_galaxy .topbox_prev,
-.topbox_skin_galaxy .topbox_next,
-.topbox_skin_galaxy .topbox_close {
+.topbox_skin_forest .topbox_prev,
+.topbox_skin_forest .topbox_next,
+.topbox_skin_forest .topbox_close {
 	text-decoration: none;
 	font-size: 45px;
 	color: #ffffff;
@@ -52,33 +52,32 @@
 	width: 55px;
 	line-height: 55px;
 	text-align: center;
-	border-radius: 10px;
 }
 
-.topbox_skin_galaxy .topbox_close {
+.topbox_skin_forest .topbox_close {
 	line-height: 65px;
 	margin-top: -10px;
 }
 
-.topbox_skin_galaxy .topbox_prev:hover,
-.topbox_skin_galaxy .topbox_next:hover,
-.topbox_skin_galaxy .topbox_close:hover {
+.topbox_skin_forest .topbox_prev:hover,
+.topbox_skin_forest .topbox_next:hover,
+.topbox_skin_forest .topbox_close:hover {
 	color: #cdcdcd;
 }
 
-.topbox_skin_galaxy .topbox_prev:before { 
+.topbox_skin_forest .topbox_prev:before {
 	content: "←"
 }
 
-.topbox_skin_galaxy .topbox_next:before { 
+.topbox_skin_forest .topbox_next:before {
 	content: "→"
 }
 
-.topbox_skin_galaxy .topbox_close:before {
+.topbox_skin_forest .topbox_close:before {
 	content: "×";
 }
 
-.topbox_skin_galaxy .topbox_title {
+.topbox_skin_forest .topbox_title {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	line-height: 1.5;
 	font-size: 16px;
@@ -91,21 +90,10 @@
 	margin-top: 7px;
 	text-align: center;
 	display: inline-block;
-	border-radius: 10px;
 }
 
-.topbox_skin_galaxy .topbox_image,
-.topbox_skin_galaxy .topbox_html5audio,
-.topbox_skin_galaxy .topbox_html5video,
-.topbox_skin_galaxy .topbox_video,
-.topbox_skin_galaxy .topbox_ajax,
-.topbox_skin_galaxy .topbox_inline,
-.topbox_skin_galaxy .topbox_pdf {
-	
-}
-
-.topbox_skin_galaxy .topbox_ajax,
-.topbox_skin_galaxy .topbox_inline {
+.topbox_skin_forest .topbox_ajax,
+.topbox_skin_forest .topbox_inline {
 	background: #fff;
 	padding: 40px;
 }

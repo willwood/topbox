@@ -8,13 +8,24 @@
 	<link rel="stylesheet" media="screen" href="demo/page.css" />
 	<link rel="stylesheet" media="screen" href="src/css/topbox.css" />
 
+	<!-- Custom video player controls for HTML5, Vimeo and YouTube (Plyr) -->
+	<link rel="stylesheet" media="screen" href="plyr/plyr.css" />
+
 	<!-- Optional skins -->
 	<link rel="stylesheet" media="screen" href="src/skins/blue_hue/styles.css" />
-	<link rel="stylesheet" media="screen" href="src/skins/galaxy/styles.css" />
+	<link rel="stylesheet" media="screen" href="src/skins/eye_watering/styles.css" />
+	<link rel="stylesheet" media="screen" href="src/skins/forest/styles.css" />
+	<link rel="stylesheet" media="screen" href="src/skins/forty_five/styles.css" />
+	<link rel="stylesheet" media="screen" href="src/skins/keyboard/styles.css" />
 	<link rel="stylesheet" media="screen" href="src/skins/impact/styles.css" />
 	<link rel="stylesheet" media="screen" href="src/skins/intense_kiss/styles.css" />
+	<link rel="stylesheet" media="screen" href="src/skins/minimal/styles.css" />
+	<link rel="stylesheet" media="screen" href="src/skins/mint/styles.css" />
 	<link rel="stylesheet" media="screen" href="src/skins/monospace/styles.css" />
-	<link rel="stylesheet" media="screen" href="src/skins/real_estate/styles.css" />
+	<link rel="stylesheet" media="screen" href="src/skins/pulse/styles.css" />
+	<link rel="stylesheet" media="screen" href="src/skins/spring_pop/styles.css" />
+	<link rel="stylesheet" media="screen" href="src/skins/stripes/styles.css" />
+	<link rel="stylesheet" media="screen" href="src/skins/vivid/styles.css" />
 	<link rel="stylesheet" media="screen" href="src/skins/whiteout/styles.css" />
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -39,9 +50,7 @@
 				</nav>
 			</header>
 
-			<p>TopBox is derived from Nivo Lightbox. I created <a href="https://stacks4stacks.com/topbox/" target="_blank">a stack addon</a> for the RapidWeaver publishing platform (named TopBox) some years ago that made use of Nivo Lightbox. I also added
-				Nivo Lightbox to a number of plugins, themes and client websites. Along the way, I found and fixed several bugs in the <a href="https://github.com/Codeinwp/Nivo-Lightbox-jQuery" target="_blank">original Nivo Lightbox</a> and made improvements
-				of my own. Because Nivo Lightbox is no longer actively maintained, I have made my variant of Nivo Lightbox opensource, under the name of 'TopBox'.</p>
+			<p>TopBox is derived from Nivo Lightbox. I created <a href="https://stacks4stacks.com/topbox/" >a stack addon</a> for the RapidWeaver publishing platform (named TopBox) around 2012, which made use of Nivo Lightbox. I also added Nivo Lightbox to a number of plugins, themes and client websites as things progressed. Along the way, I found and fixed several bugs in the <a href="https://github.com/Codeinwp/Nivo-Lightbox-jQuery" >original Nivo Lightbox</a> and made improvements of my own. Because Nivo Lightbox is seemingly no longer actively updated, I have released my variant of Nivo Lightbox opensource, under the name of 'TopBox'.</p>
 
 			<p>TopBox is MIT licensed, so you are free to download and use it wherever and however you want.</p>
 
@@ -54,15 +63,15 @@
 					<li>Major changes to content positioning. Less Javascript, more CSS Flexbox!</li>
 					<li>Deleted older hacks and prefixes for obsolete web browsers (like Internet Explorer).</li>
 					<li>Added HTML5 Audio, Dailymotion, SVG, TED, Brighteon, PDF embed and WebP image support.</li>
-					<li>Easier translation of lightbox UI tooltips into different languages.</li>
-					<li>Greater control over the attributes used for lightbox captioning.</li>
-					<li>Various accessibility improvements, including features like keyboard focus.</li>
+					<li>Easier translation of lightbox user interface tooltips into different languages.</li>
+					<li>Greater control over the attributes used for lightbox triggering and captioning.</li>
+					<li>Various accessibility improvements, including features like keyboard focus and ARIA labels.</li>
 					<li>The page background can be blurred, when the lightbox opens.</li>
 				</ul>
 			</p>
 
 			<p>TopBox is used in thousands of websites; ranging from small blogs right-up to fortune 100 companies. A durable and flexible lightbox effect you can depend upon. TopBox is <a href="https://github.com/willwood/topbox"
-					target="_blank">maintained on Github</a> as an opensource project.</p>
+					>maintained on Github</a> as an opensource project.</p>
 
 		</div>
 	</section>
@@ -71,9 +80,9 @@
 		<div class="container">
 			<h3>Using TopBox</h3>
 			<p>Download the source code files from Github. <a href="https://github.com/willwood/topbox"
-					target="_blank">Click here.</a></p>
+					>Click here.</a> Use the ZIP download option.</p>
 			<p>Upload the TopBox files (within the <code>/src/</code> directory) to your web server.</p>
-			<p>Add a call to topbox.css stylesheet with the <code>&lt;head></code> section of your webpage like this:<br>
+			<p>Add a call to topbox.css stylesheet within the <code>&lt;head></code> section of your webpage like this:<br>
 				<pre><code>&lt;link rel="stylesheet" media="screen" href="path/to/topbox.css"></code></pre>
 			</p>
 			<p>Then add the jQuery Javascript call, topbox.js and your function to the end of your webpage, ideally before the closing <code>&lt;/body></code> tag, like this:<br>
@@ -89,9 +98,10 @@
 			<p>The chances are that your webpage already includes CSS and / or jQuery. You might not need the extra jQuery call. So feel free to take only what you need and merge the TopBox code into your existing website code.</p>
 
 			<p></p>To make a link (like an image) open in TopBox with a title, the HTML markup is as simple as this:<br>
-			<pre><code>&lt;a href="path/to/my-image.jpg" class="lightbox" title="My Image">Click me!&lt;/a></code></pre>
+			<pre><code>&lt;a href="path/to/my-image.jpg" class="lightbox" aria-haspopup="dialog" title="My Image">Click me!&lt;/a></code></pre>
 			</p>
-			<p>By default, any link with a class of <code>lightbox</code> will trigger a TopBox. However this can be changed to another selector name. attribute or element type, if you prefer.</p>
+			<p>By default, any link with a class of <code>lightbox</code> will trigger a TopBox. However this can be changed to another selector name, attribute, or element type, if you prefer.</p>
+			<p>Tip: We add the <code>aria-haspopup="dialog"</code> attribute to our link, to improve webpage accessibility.</p>
 		</div>
 	</section>
 
@@ -100,36 +110,39 @@
 			<h3>Examples</h3>
 			<p>Much like any lightbox or modal window effect, TopBox is best-used in moderation for the sensible display of simple content types. Here are some examples of what it can do:</p>
 			<div class="button-group">
-				<a href="demo/alpine-climb.jpg" class="button lightbox" title="Landscape Image">Landscape Image</a>
-				<a href="demo/action.jpg" class="button lightbox" title="Portrait Image">Portrait Image</a>
-				<a href="demo/image-standard.jpg" data-lightbox-hidpi="demo/image-retina@2x.jpg" class="button lightbox" title="Hi-Res Image">Hi-Res Image</a>
-				<a href="demo/world-map.svg" class="button lightbox" title="SVG">SVG</a>
-				<a href="demo/crow.mp3" class="button lightbox" title="HTML5 Audio MP3">HTML5 Audio</a>
-				<a href="https://www.openstreetmap.org/export/embed.html?bbox=-79.7545623779297%2C43.432977075795606%2C-79.19151306152345%2C43.874138181474734&amp;layer=mapnik" class="button lightbox" title="Open Street Map (using an iFrame embed link)"
+				<a href="demo/landscape.jpg" class="button lightbox" aria-haspopup="dialog" title="Landscape Image">Landscape Image</a>
+				<a href="demo/portrait.jpg" class="button lightbox" aria-haspopup="dialog" title="Portrait Image">Portrait Image</a>
+				<a href="demo/image-standard.jpg" data-lightbox-hidpi="demo/image-retina@2x.jpg" class="button lightbox" aria-haspopup="dialog" title="Hi-Res Image">Hi-Res Image</a>
+				<a href="demo/world-map.svg" class="button lightbox" aria-haspopup="dialog" title="SVG">SVG</a>
+				<a href="demo/crow.mp3" class="button lightbox" aria-haspopup="dialog" title="HTML5 Audio MP3">HTML5 Audio</a>
+				<a href="https://www.openstreetmap.org/export/embed.html?bbox=-79.7545623779297%2C43.432977075795606%2C-79.19151306152345%2C43.874138181474734&amp;layer=mapnik" class="button lightbox" aria-haspopup="dialog" title="Open Street Map (using an iFrame embed link)"
 					data-lightbox-type="iframe">Open Street Map</a>
-				<a href="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d199976.76838191133!2d-114.21423658002013!3d51.0130332588373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2suk!4v1547414092516" class="button lightbox"
-					title="Google Maps (using an iFrame embed link)" data-lightbox-type="iframe">Google&reg; Maps</a>
-				<a href="https://youtu.be/2xX7RrxyRac" class="button lightbox" title="YouTube Video">YouTube&#8482; Video</a>
-				<a href="https://vimeo.com/143418951" class="button lightbox" title="Vimeo Video">Vimeo&#8482; Video</a>
+				<a href="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d199976.76838191133!2d-114.21423658002013!3d51.0130332588373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2suk!4v1547414092516" class="button lightbox" aria-haspopup="dialog"
+					title="Google Maps (using an iFrame embed link)" data-lightbox-type="iframe">Google Maps</a>
+				<a href="https://youtu.be/2xX7RrxyRac" class="button lightbox" aria-haspopup="dialog" title="YouTube Video">YouTube Video</a>
+				<a href="https://vimeo.com/143418951" class="button lightbox" aria-haspopup="dialog" title="Vimeo Video">Vimeo Video</a>
 				<a href="https://ted.com/talks/lloyd_treinish_this_weather_forecasting_model_is_actually_accurate?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare" class="button lightbox" title="TED Video">TED Video</a>
-				<a href="demo/pink-monster.gif" class="button lightbox" title="Animated GIF">Animated GIF</a>
-				<a href="#inline" class="button lightbox" data-lightbox-type="inline" title="Inline Content">Inline HTML Content</a>
+				<a href="demo/pink-monster.gif" class="button lightbox" aria-haspopup="dialog" title="Animated GIF">Animated GIF</a>
+				<a href="#inline" class="button lightbox" data-lightbox-type="inline" aria-haspopup="dialog" title="Inline Content">Inline HTML Content</a>
 				<div id="inline" style="display: none;">
 					<h3>Inline Content</h3>This TopBox content type takes the ID selector name on an element on your webpage, like a container with its style set to <code>display:none</code> with CSS. TopBox opens this content within the lightbox and makes it
 					visible. Useful for simple content types, like a contact form.<br><br><strong>You can mix both text and images together, without breaking the alignment. Try resizing your screen too!</strong><br>
 					<img src="demo/pink-monster.gif" alt="Monster"><br><br>
 					When creating your link or button to launch inline content, set the <code>href</code> attribute equal to the ID of the element you want to open. e.g. <code>#myDiv</code>
 				</div>
-				<a href="https://dai.ly/x6bqjif" class="button lightbox" title="Dailymotion Video">Dailymotion&#8482; Video</a>
-				<a href="https://www.brighteon.com/5995999748001" class="button lightbox" title="Brighteon Video">Brighteon&#8482; Video</a>
-				<a href="demo/bowmans-nose.webp" class="button lightbox" title="WebP Image (Note: requires a compatible browser with WebP support)">WebP Image</a>
-				<a href="demo/ajax-test.txt" class="button lightbox" data-lightbox-type="ajax" title="AJAX Content">AJAX Content</a>
-				<a href="demo/scrolling-test.txt" class="button lightbox" data-lightbox-type="ajax" title="Scrolling Content">Scrolling</a>
-				<a href="https://wikipedia.org" class="button lightbox" data-lightbox-type="iframe" title="iFrame Content">iFrame</a>
-				<a href="demo/video.mp4" class="button lightbox" title="HTML5 Video MP4">HTML5 Video</a>
-				<a href="demo/test-document.pdf" class="button lightbox" title="PDF Embed">PDF Embed</a>
-				<a href="demo/not-found.jpg" class="button lightbox" title="Not Found">Not Found (404)</a>
+				<a href="https://dai.ly/x6bqjif" class="button lightbox" aria-haspopup="dialog" title="Dailymotion Video">Dailymotion Video</a>
+				<a href="https://www.brighteon.com/5995999748001" class="button lightbox" aria-haspopup="dialog" title="Brighteon Video">Brighteon Video</a>
+				<a href="https://fast.wistia.net/embed/iframe/g5pnf59ala?videoFoam=true&autoPlay=true&playerColor=007dc1" class="button lightbox" aria-haspopup="dialog" data-lightbox-type="video-iframe" title="Wistia Video (using an iFrame embed link)">Wistia Video</a>
+				<a href="demo/bowmans-nose.webp" class="button lightbox" aria-haspopup="dialog" title="WebP Image (Note: requires a compatible browser with WebP support)">WebP Image</a>
+				<a href="demo/ajax-test.txt" class="button lightbox" aria-haspopup="dialog" data-lightbox-type="ajax" title="AJAX Content">AJAX Content</a>
+				<a href="demo/scrolling-test.txt" class="button lightbox" aria-haspopup="dialog" data-lightbox-type="ajax" title="Scrolling Content">Scrolling Text Content</a>
+				<a href="https://wikipedia.org" class="button lightbox" aria-haspopup="dialog" data-lightbox-type="iframe" title="iFrame Content">iFrame</a>
+				<a href="demo/video.mp4" class="button lightbox" aria-haspopup="dialog" title="HTML5 Video MP4">HTML5 Video</a>
+				<a href="demo/test-document.pdf" class="button lightbox" aria-haspopup="dialog" title="PDF Embed">PDF Document Embed</a>
+				<a href="demo/not-found.jpg" class="button lightbox" aria-haspopup="dialog" title="Not Found">Not Found (404)</a>
 			</div>
+			<p>Tip: The HTML5 Video, Vimeo and YouTube examples here use custom controls via the excellent <a href="https://plyr.io/">Plyr plugin</a>. Setup of this plugin to work with TopBox is documented <a href="#custom-video-controls">here</a>.</p>
+
 		</div>
 	</section>
 
@@ -141,19 +154,21 @@
 				<li>iFrames require a <code>data-lightbox-type="iframe"</code> attribute.</li>
 				<li>AJAX requires a <code>data-lightbox-type="ajax"</code> attribute.</li>
 				<li>Inline requires a <code>data-lightbox-type="inline"</code> attribute.</li>
+				<li>Video iFrames require a <code>data-lightbox-type="video-iframe"</code> attribute.</li>
 			</ul>
 			<p>For example, our iFrame example above has the following markup:
-				<pre><code>&lt;a href="https://wikipedia.org" class="lightbox" data-lightbox-type="iframe">iFrame&lt;/a></code></pre>
+				<pre><code>&lt;a href="https://wikipedia.org" class="lightbox" title="iFrame Content" aria-haspopup="dialog" data-lightbox-type="iframe">iFrame&lt;/a></code></pre>
 			</p>
+			<p>You may be wondering what's the difference between <code>iframe</code> and <code>video-iframe</code> lightbox types? The latter has its height permanently locked to 56.25% tall (16:9 ratio) making it good to use for embedded video types like Wistia, Vidyard, and others. Some of these video providers require additional code adding to your webpage, hence we don't detect these specific video providers automatically like we do with YouTube or Vimeo.</p>
 			<p>
 				<p><strong>Galleries</strong><br>The example TopBoxes presented above open and close singular items. By giving two or more items a <code>data-lightbox-gallery</code> data attribute, you can effortlessly 'chain' multiple items together like
-					this, with next and previous buttons:
-					<pre><code>&lt;a href="path/to/my-image.jpg" class="lightbox" data-lightbox-gallery="gallery1">Click me!&lt;/a></code></pre>
-					<a href="demo/gallery-image-1.jpg" class="button lightbox" data-lightbox-gallery="mygallery" title="1 / 5">Example Gallery</a>
-					<a href="demo/gallery-image-2.jpg" class="lightbox" data-lightbox-gallery="mygallery" title="2 / 5" hidden>Example Gallery</a>
-					<a href="demo/gallery-image-3.jpg" class="lightbox" data-lightbox-gallery="mygallery" title="3 / 5" hidden>Example Gallery</a>
-					<a href="demo/gallery-image-4.jpg" class="lightbox" data-lightbox-gallery="mygallery" title="4 / 5" hidden>Example Gallery</a>
-					<a href="demo/gallery-image-5.jpg" class="lightbox" data-lightbox-gallery="mygallery" title="5 / 5" hidden>Example Gallery</a>
+					this, with next and previous buttons, and swipe support on touch screens:
+					<pre><code>&lt;a href="path/to/my-image.jpg" class="lightbox" aria-haspopup="dialog" data-lightbox-gallery="gallery1">Click me!&lt;/a></code></pre>
+					<a href="demo/gallery-image-1.jpg" class="button lightbox" aria-haspopup="dialog" data-lightbox-gallery="mygallery" title="1 / 5">Example Gallery</a>
+					<a href="demo/gallery-image-2.jpg" class="lightbox" aria-haspopup="dialog" data-lightbox-gallery="mygallery" title="2 / 5" hidden>Example Gallery</a>
+					<a href="demo/gallery-image-3.jpg" class="lightbox" aria-haspopup="dialog" data-lightbox-gallery="mygallery" title="3 / 5" hidden>Example Gallery</a>
+					<a href="demo/gallery-image-4.jpg" class="lightbox" aria-haspopup="dialog" data-lightbox-gallery="mygallery" title="4 / 5" hidden>Example Gallery</a>
+					<a href="demo/gallery-image-5.jpg" class="lightbox" aria-haspopup="dialog" data-lightbox-gallery="mygallery" title="5 / 5" hidden>Example Gallery</a>
 				</p>
 				<p>
 					<p><strong>Retina Display Images</strong><br>High-resolution images (optimised for retina displays) are supported too. Within your link markup for opening a standard resolution image, add a <code>data-lightbox-gallery</code> data attribute
@@ -341,15 +356,36 @@ $(document).ready(function() {
 			<p>The default skin used by TopBox is called 'Darkroom'. As the name suggests, this offers a light-on-dark colour scheme. By taking the CSS for Darkroom (towards the end of topbox.css) you can use this as a basis for creating your own skin. The
 				name of our new skin can be passed via the TopBox function (see API for details).</p>
 
-			<p>The <code>/src/skins/</code> directory (within the TopBox source code download) provides a few ready-made lightbox styles to experiment with or modify. Add the call to your CSS file and change the <code>skin</code> option to correspond to
-				the skin name you want to use.</p>
+			<p>The <code>/src/skins/</code> directory (within the TopBox source code download) provides a few ready-made lightbox styles to experiment with or modify. Skins included TopBox include:
+				<ul>
+					<li>Blue Hue (blue_hue)</li>
+					<li>Eye Watering (eye_watering)</li>
+					<li>Forest (forest)</li>
+					<li>Forty Five (forty_five)</li>
+					<li>Impact (impact)</li>
+					<li>Intense Kiss (intense_kiss)</li>
+					<li>Keyboard (keyboard)</li>
+					<li>Minimal (minimal)</li>
+					<li>Monospace (monospace)</li>
+					<li>Pulse (pulse)</li>
+					<li>Spring Pop (spring_pop)</li>
+					<li>Stripes (stripes)</li>
+					<li>Vivid (vivid)</li>
+					<li>Whiteout (whiteout)</li>
+				</ul>
+				Add the call to your CSS file and change the <code>skin</code> option to correspond to the skin name you want to use. You can only use a single skin per-page.</p>
 		</div>
 	</section>
 
 	<section id="extras" class="even">
 		<div class="container">
 			<h3>Extras</h3>
-			<p><strong>Change the lightbox size</strong><br>TopBox makes use of simple and modern CSS markup to control content sizing. We use a mixture of CSS Flexbox, transforms and viewport units of measurement. In essence, the markup to control
+			<p><strong id="basic-copy-protection">Basic Copy Protection</strong><br>You can impose basic copy protection on your TopBox content by means of disabling mouse events with CSS:
+				<pre><code>.topbox_content {
+        pointer-events: none;
+}</code></pre>This will stop the 'save image as' option showing, when a user right-clicks on an image. Obviously this will not stop the user still getting the image via other methods (like screengrabs or from the source code)! Pointer events should not be used for content that requires interaction with, such as video.
+			</p>
+			<p><strong id="change-lightbox-size">Change the lightbox size</strong><br>TopBox makes use of simple and modern CSS markup to control content sizing. We use a mixture of CSS Flexbox, transforms and viewport units of measurement. In essence, the markup to control
 				lightbox sizing is as simple as this:
 				<pre><code>.topbox_content {
 	width: 80vw;
@@ -360,7 +396,7 @@ $(document).ready(function() {
 				proportionally to fit. If content (like iFrames, Inline or AJAX) does not fit within the viewable area, they will display scroll bars. Media breakpoints could potentially be used too.
 			</p>
 
-			<p><strong>Disable on mobile</strong><br>Lightboxes serve little purpose on mobile. Disable their triggers below a certain breakpoint width, with simple CSS like this:
+			<p><strong id="disable-on-mobile">Disable on mobile</strong><br>Lightboxes serve little purpose on mobile. Disable their triggers below a certain breakpoint width, with simple CSS like this:
 				<pre><code>@media screen and (max-width: 460px) {
 	.lightbox {
 		pointer-events: none;
@@ -369,14 +405,14 @@ $(document).ready(function() {
 				In this instance, thumbnail images continue to show but won't do anything when clicked or tapped on screens less-than 460px wide.
 			</p>
 
-			<p><strong>Disable scrolling</strong><br>You can prevent the page background scrolling when the lightbox is open, using some CSS like this:
+			<p><strong id="disable-scrolling">Disable scrolling</strong><br>You can prevent the page background scrolling when the lightbox is open, using some CSS like this:
 				<pre><code>body.topbox_open {
 	overflow: hidden;
 }</code></pre>
 				When the lightbox is opened, the webpage will no longer scroll. Scrolling resumes again, when the lightbox is closed.
 			</p>
 
-			<p><strong>Trigger from a URL hash</strong><br>Make a TopBox open on page load via a 'hash' in the page URL. Add this jQuery within your <code>(document).ready</code> handler:
+			<p><strong id="trigger-from-url-hash">Trigger from a URL hash</strong><br>Make a TopBox open on page load via a 'hash' in the page URL. Add this jQuery within your <code>(document).ready</code> handler:
 				<pre><code>if(window.location.hash) {
 	var hashValue = location.hash.replace(/^#/, '');
 	$("." +hashValue).click();
@@ -384,9 +420,9 @@ $(document).ready(function() {
 				For example, https://example.com/#mountain would do a 'virtual' click on the TopBox link that has a class of <code>mountain</code> applied to itself.
 			</p>
 
-			<p><strong>Custom video controls</strong><br>
-				Content types like HTML5 Video, YouTube and Vimeo support custom player controls, using a plugin like <a href="https://plyr.io/" target="_blank">Plyr</a>. You may choose to use custom video controls, to give your embedded video's a bit more
-				professionalism. Per <a href="https://github.com/sampotts/plyr" target="_blank">the setup instructions</a> for Plyr, add a CSS call to the top of your page:
+			<p><strong id="custom-video-controls">Custom video controls</strong><br>
+				Content types like HTML5 Video, YouTube and Vimeo support custom player controls, using a plugin like <a href="https://plyr.io/">Plyr</a>. You may choose to use custom video controls, to give your embedded video's a bit more
+				professionalism. Per <a href="https://github.com/sampotts/plyr" >the setup instructions</a> for Plyr, add a CSS call to the top of your page:
 
 				<pre><code>&lt;link rel="stylesheet" href="path/to/plyr.css"></code></pre>
 
@@ -420,13 +456,13 @@ $(document).ready(function() {
 			<p>Like the sound of TopBox? You can download the source code for TopBox from Github and follow the setup instructions provided on this page.</p>
 			<p>I also have plugin versions of it compiled and setup ready for use in RapidWeaver, <strike>Blocs App and Wordpress</strike>. Install these addons, per the normal procedures.</p>
 			<div class="button-group">
-				<a href="https://github.com/willwood/topbox" class="button" target="_blank"><i class="fab fa-github"></i> Source Code</a>
-				<a href="https://stacks4stacks.com/topbox/" class="button" target="_blank"><i class="fas fa-cubes"></i> RapidWeaver Stack</a>
+				<a href="https://github.com/willwood/topbox" class="button"><i class="fab fa-github"></i> Source Code</a>
+				<a href="https://stacks4stacks.com/topbox/" class="button"><i class="fas fa-cubes"></i> RapidWeaver Stack</a>
 				<a href="#downloads" class="button disabled"><i class="fas fa-paint-brush"></i> Blocs App Bric</a>
 				<a href="#downloads" class="button disabled"><i class="fab fa-wordpress"></i> Wordpress Plugin</a>
 			</div>
-			<p>I am a strong advocate of free and opensource software. The source code for TopBox is a free download and provided under the <a href="https://raw.githubusercontent.com/willwood/topbox/master/LICENSE" target="_blank">MIT license</a>.
-				Donations <a href="https://www.paypal.me/williamwoodgate" target="_blank">via PayPal</a> are welcomed and I am also <a href="https://willwoodgate.com">available for hire</a> as a freelance full-stack web developer.</p>
+			<p>I am a strong advocate of free and opensource software. The source code for TopBox is a free download and provided under the <a href="https://raw.githubusercontent.com/willwood/topbox/master/LICENSE" >MIT license</a>.
+				Donations <a href="https://www.paypal.me/williamwoodgate" >via PayPal</a> are welcomed and I am also <a href="https://willwoodgate.com">available for hire</a> as a freelance full-stack web developer.</p>
 		</div>
 	</section>
 
@@ -442,11 +478,21 @@ $(document).ready(function() {
 	<!-- TopBox Javascript -->
 	<script src="src/js/topbox.js"></script>
 
+	<!-- Custom video player controls for HTML5, Vimeo and YouTube (Plyr) -->
+	<script src="plyr/plyr.min.js"></script>
+
 	<!-- Initiate the TopBox plugin -->
 	<script>
 		$(document).ready(function() {
 			$('.lightbox').topbox({
-				skin: 'darkroom'
+				skin: 'darkroom',
+				afterShowLightbox: function(lightbox){
+					const player = new Plyr('#player', {
+						/* Player options */
+						autoplay: true
+					});
+				},
+				backgroundBlur: false
 			});
 
 			// Extra - Trigger a TopBox via a page anchor
