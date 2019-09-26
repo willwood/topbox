@@ -311,21 +311,6 @@ https://github.com/sampotts/plyr
   transform: translateY(0);
 }
 
-/* Give all content types a white background fill */
-.topbox_image,
-.topbox_html5audio,
-.topbox_html5video,
-.topbox_embedded_web_video,
-.plyr,
-.topbox_ajax,
-.topbox_inline,
-.topbox_ajax,
-.topbox_pdf_wrap,
-.topbox_iframe_wrap,
-.topbox_video_iframe_wrap {
-  background: #fff;
-}
-
 /* Our default lightbox skin (darkroom) */
 .topbox_open .topbox_blur_wrapper {
   filter: blur(1px);
