@@ -1,0 +1,88 @@
+/* Our lightbox skin named 'script' */
+
+/* https://fonts.google.com/specimen/Rouge+Script?selection.family=Rouge+Script */
+
+/* latin */
+@font-face {
+  font-family: 'Rouge Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Rouge Script'), local('RougeScript-Regular'), url(rougescript.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.topbox_skin_script .topbox_fill {
+  background: rgba(255,255,255,0.92);
+}
+
+.topbox_skin_script .topbox_error,
+.topbox_skin_script .topbox_pdf_mobile_message {
+  color: #000000;
+  font-size: 18px;
+}
+
+.topbox_skin_script a.topbox_pdf_mobile_button,
+.topbox_skin_script a.topbox_pdf_mobile_button:visited {
+  color: #000000;
+  border: 2px solid #000000;
+  text-decoration: none;
+  transition: all 200ms ease-in;
+  padding: 1rem;
+  line-height: 1;
+  display: block;
+  margin-top: 1rem;
+}
+
+.topbox_skin_script .topbox_nav {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.topbox_skin_script .topbox_prev,
+.topbox_skin_script .topbox_next,
+.topbox_skin_script .topbox_close {
+  font-family: 'Rouge Script', cursive;
+  text-decoration: none;
+  font-size: 6vw;
+  color: #000000;
+  transition: all 200ms ease-in;
+  padding: 2vw;
+  line-height: 1;
+}
+
+.topbox_skin_script .topbox_close {
+  padding-top: 0;
+}
+
+.topbox_skin_script .topbox_prev:hover,
+.topbox_skin_script .topbox_next:hover,
+.topbox_skin_script .topbox_close:hover {
+  color: rgb(0, 0, 0, 0.5);
+}
+
+.topbox_skin_script .topbox_prev:before {
+  content: "<"
+}
+
+.topbox_skin_script .topbox_next:before {
+  content: ">"
+}
+
+.topbox_skin_script .topbox_close:before {
+  content: "x";
+}
+
+.topbox_skin_script .topbox_title {
+  font-family: 'Rouge Script', cursive;
+  line-height: 1.5;
+  font-size: 2.5vw;
+  font-style: normal;
+  font-weight: normal;
+  background: none;
+  color: #000000;
+  text-align: center;
+  display: inline-block;
+}
