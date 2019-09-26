@@ -588,9 +588,10 @@ $(document).ready(function() {
     init: function() {
       var $this = this;
 
-      // Need this so we don't use CSS transitions in mobile
-      if (!$('html').hasClass('topbox_notouch')) $('html').addClass('topbox_notouch');
-      if ('ontouchstart' in document) $('html').removeClass('topbox_notouch');
+      // If web browser is NOT a touch device (need this so we don't use CSS transitions in mobile)
+      if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent))) {
+        $('body').addClass('topbox_notouch');
+      }
 
       // Background blur
       if (this.options.backgroundBlur) {
