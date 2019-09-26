@@ -5,7 +5,7 @@
   border: 5px solid #FF2F92;
 }
 
-.topbox_skin_vivid .topbox_loading_message,
+.topbox_skin_vivid .topbox_error,
 .topbox_skin_vivid .topbox_pdf_mobile_message {
   color: #FF2F92;
   font-size: 18px;

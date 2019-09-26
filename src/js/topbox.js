@@ -568,7 +568,6 @@ $(document).ready(function() {
       onPrev: function(element) {},
       beforeNext: function(element) {},
       onNext: function(element) {},
-      loadingMessage: 'Loading...',
       pdfMessage: 'View the PDF in a new window:',
       pdfButton: 'Tap Here',
       errorMessage: 'The requested content cannot be loaded. Please try again later.'
@@ -744,9 +743,6 @@ $(document).ready(function() {
       video = href.match(/(youtube|youtube-nocookie|youtu|vimeo)\.(com|be|ly|tv)\/((watch\?v=([\w-]+))|([\w-]+))/);
       videoOther = href.match(/(dai|brighteon|ted)\.(com|be|net|ly|tv)\/((talks\/([\w-]+))|([\w-]+))/);
 
-
-      $('body').addClass('topbox_loading');
-
       // Is HiDPI?
       if (this.isHidpi() && link.attr('data-lightbox-hidpi')) {
         href = link.attr('data-lightbox-hidpi');
@@ -760,7 +756,6 @@ $(document).ready(function() {
         });
         imgtag.one('load', function() {
           content.prepend(imgtag);
-          $('body').removeClass('topbox_loading');
         }).each(function() {
           if (this.complete) $(this).on("load");
         });
@@ -768,7 +763,6 @@ $(document).ready(function() {
         imgtag.on("error", function() {
           var wrap = $('<div class="topbox_error"><p>' + $this.options.errorMessage + '</p></div>');
           content.html(wrap);
-          $('body').removeClass('topbox_loading');
         });
       }
 
@@ -810,9 +804,6 @@ $(document).ready(function() {
           });
           content.prepend(iframeVideo);
           $('iframe').wrap('<div class="topbox_embedded_web_video" id="player" />');
-          iframeVideo.on("load", function() {
-            $('body').removeClass('topbox_loading');
-          });
         }
       }
 
@@ -850,9 +841,6 @@ $(document).ready(function() {
           });
           content.prepend(iframeVideo);
           $('iframe').wrap('<div class="topbox_embedded_web_video" />');
-          iframeVideo.on("load", function() {
-            $('body').removeClass('topbox_loading');
-          });
 
         }
       }
@@ -865,12 +853,10 @@ $(document).ready(function() {
           success: function(data) {
             var wrap = $('<div class="topbox_ajax" />');
             wrap.append(data);
-            content.html(wrap).removeClass('topbox_loading');
           },
           error: function() {
             var wrap = $('<div class="topbox_error"><p>' + $this.options.errorMessage + '</p></div>');
             content.html(wrap);
-            $('body').removeClass('topbox_loading');
           }
         });
       }
@@ -881,11 +867,9 @@ $(document).ready(function() {
           var wrap = $('<div class="topbox_inline" />');
           wrap.append($(href).clone().show());
           content.html(wrap);
-          $('body').removeClass('topbox_loading');
         } else {
           var wrapError = $('<div class="topbox_error"><p>' + $this.options.errorMessage + '</p></div>');
           content.html(wrapError);
-          $('body').removeClass('topbox_loading');
         }
       }
 
@@ -895,7 +879,6 @@ $(document).ready(function() {
           var pdfLink = href
           var pdfMobileMessage = $('<div class="topbox_pdf_mobile_message"><p>' + $this.options.pdfMessage + '<br><a href="' + pdfLink + '" target="_blank" class="topbox_pdf_mobile_button">' + $this.options.pdfButton + '</a></p></div>');
           content.html(pdfMobileMessage);
-          $('body').removeClass('topbox_loading');
         } else {
           var iframe = $('<iframe>', {
             src: href,
@@ -907,9 +890,6 @@ $(document).ready(function() {
           });
           content.html(iframe);
           $('iframe.topbox_pdf').wrap('<div class="topbox_pdf_wrap" />');
-          iframe.on("load", function() {
-            $('body').removeClass('topbox_loading');
-          });
         }
       }
 
@@ -926,10 +906,6 @@ $(document).ready(function() {
         });
         content.html(audioframe);
         $('audio.topbox_html5audio').wrap('<div class="topbox_html5_audio_wrap" />');
-        $('body').removeClass('topbox_loading');
-        audioframe.on("load", function() {
-          $('body').removeClass('topbox_loading');
-        });
       }
 
       // HTML5 video
@@ -945,9 +921,6 @@ $(document).ready(function() {
         });
         content.html(vidframe);
         $('video.topbox_html5video').wrap('<div class="topbox_html5_video_wrap" />');
-        vidframe.on("load", function() {
-          $('body').removeClass('topbox_loading');
-        });
       }
 
       // iFrame (default)
@@ -962,9 +935,6 @@ $(document).ready(function() {
         });
         content.html(iframe);
         $('iframe.topbox_iframe').wrap('<div class="topbox_iframe_wrap" />');
-        iframe.on("load", function() {
-          $('body').removeClass('topbox_loading');
-        });
       }
 
       // Video iFrame
@@ -979,9 +949,6 @@ $(document).ready(function() {
         });
         content.html(iframe);
         $('iframe.topbox_video_iframe').wrap('<div class="topbox_video_iframe_wrap" />');
-        iframe.on("load", function() {
-          $('body').removeClass('topbox_loading');
-        });
 
       } else {
         return false;
@@ -1009,7 +976,6 @@ $(document).ready(function() {
         'class': 'topbox_overlay topbox_skin_' + this.options.skin + ' topbox_effect_' + this.options.effect
       });
       var fill = $('<div class="topbox_fill"></div>');
-      var loading = $('<div class="topbox_loading_message">' + this.options.loadingMessage + '</div>');
       var wrap = $('<div>', {
         'class': 'topbox_wrapper'
       });
@@ -1029,7 +995,6 @@ $(document).ready(function() {
       overlay.append(wrap);
       overlay.append(nav);
       overlay.append(close);
-      wrap.append(loading);
       $('body').append(overlay);
 
       var $this = this;

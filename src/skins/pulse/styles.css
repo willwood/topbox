@@ -26,7 +26,7 @@
   background-color: #45CEEF;
 }
 
-.topbox_skin_pulse .topbox_loading_message,
+.topbox_skin_pulse .topbox_error,
 .topbox_skin_pulse .topbox_pdf_mobile_message {
   color: rgb(145, 145, 145);
   font-size: 18px;

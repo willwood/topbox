@@ -4,7 +4,7 @@
   opacity: 0.9;
 }
 
-.topbox_skin_ghost .topbox_loading_message,
+.topbox_skin_ghost .topbox_error,
 .topbox_skin_ghost .topbox_pdf_mobile_message {
   color: #ffffff;
   font-size: 18px;

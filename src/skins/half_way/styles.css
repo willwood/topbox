@@ -20,7 +20,7 @@
   background-color: #292929;
 }
 
-.topbox_skin_half_way .topbox_loading_message,
+.topbox_skin_half_way .topbox_error,
 .topbox_skin_half_way .topbox_pdf_mobile_message {
   color: #ffffff;
   font-size: 18px;

@@ -10,7 +10,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5db1', endColorstr='#ef017c', GradientType=0);
 }
 
-.topbox_skin_intense_kiss .topbox_loading_message,
+.topbox_skin_intense_kiss .topbox_error,
 .topbox_skin_intense_kiss .topbox_pdf_mobile_message {
   color: #333333;
   font-size: 18px;

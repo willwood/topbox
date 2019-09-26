@@ -4,7 +4,7 @@
   border: 5px solid #000000;
 }
 
-.topbox_skin_monospace .topbox_loading_message,
+.topbox_skin_monospace .topbox_error,
 .topbox_skin_monospace .topbox_pdf_mobile_message {
   color: #000000;
   font-size: 18px;

@@ -3,7 +3,7 @@
   background: rgba(33, 33, 33, 0.95);
 }
 
-.topbox_skin_engraved .topbox_loading_message,
+.topbox_skin_engraved .topbox_error,
 .topbox_skin_engraved .topbox_pdf_mobile_message {
   color: #191919;
   font-size: 18px;

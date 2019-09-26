@@ -4,7 +4,7 @@
   background: linear-gradient(90deg, rgba(131, 58, 180, 0.95) 0%, rgba(253, 29, 29, 0.95) 50%, rgba(252, 176, 69, 0.95) 100%);
 }
 
-.topbox_skin_eye_watering .topbox_loading_message,
+.topbox_skin_eye_watering .topbox_error,
 .topbox_skin_eye_watering .topbox_pdf_mobile_message {
   color: #000000;
   font-size: 18px;

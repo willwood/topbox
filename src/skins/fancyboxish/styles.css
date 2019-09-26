@@ -3,7 +3,7 @@
   background-color: rgba(119, 119, 119, 0.7);
 }
 
-.topbox_skin_fancyboxish .topbox_loading_message,
+.topbox_skin_fancyboxish .topbox_error,
 .topbox_skin_fancyboxish .topbox_pdf_mobile_message {
   color: #ffffff;
   font-size: 18px;

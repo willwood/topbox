@@ -20,6 +20,7 @@
 	<link rel="stylesheet" media="screen" href="src/skins/fancyboxish/styles.css">
 	<link rel="stylesheet" media="screen" href="src/skins/forest/styles.css">
 	<link rel="stylesheet" media="screen" href="src/skins/framed/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/ghost/styles.css">
 	<link rel="stylesheet" media="screen" href="src/skins/half_way/styles.css">
 	<link rel="stylesheet" media="screen" href="src/skins/keyboard/styles.css">
 	<link rel="stylesheet" media="screen" href="src/skins/lightbox/styles.css">
@@ -30,6 +31,8 @@
 	<link rel="stylesheet" media="screen" href="src/skins/monospace/styles.css">
 	<link rel="stylesheet" media="screen" href="src/skins/night_mode/styles.css">
 	<link rel="stylesheet" media="screen" href="src/skins/pulse/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/scribble/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/script/styles.css">
 	<link rel="stylesheet" media="screen" href="src/skins/shadeless/styles.css">
 	<link rel="stylesheet" media="screen" href="src/skins/smart/styles.css">
 	<link rel="stylesheet" media="screen" href="src/skins/social/styles.css">
@@ -240,7 +243,7 @@ $(document).ready(function() {
 						<td class="tg-0lax">effect</td>
 						<td class="tg-0lax">String</td>
 						<td class="tg-0lax">'fade'</td>
-						<td class="tg-0lax">The opening and closing CSS transition effect. Can be one of <code>fade</code>, <code>fadeScale</code>, <code>slideLeft</code>, <code>slideDown</code>, <code>slideUp</code> or <code>fall</code>.</td>
+						<td class="tg-0lax">The opening CSS transition effect. Can be one of either <code>none</code>, <code>fade</code>, <code>slideLeft</code>, <code>slideDown</code>, or <code>slideUp</code>.</td>
 					</tr>
 					<tr>
 						<td class="tg-0lax">backgroundBlur</td>
@@ -261,12 +264,6 @@ $(document).ready(function() {
 						<td class="tg-0lax">true</td>
 						<td class="tg-0lax">If enabled, a person can navigate through the lightbox using their keyboard left, right and escape keys.</td>
 					</tr>
-					<!-- <tr>
-								<td class="tg-0lax">swipeNav</td>
-								<td class="tg-0lax">Boolean</td>
-								<td class="tg-0lax">true</td>
-								<td class="tg-0lax">When enabled, a lightbox gallery can be navigated using left and right swiping gestures on touch screens.</td>
-							</tr> -->
 					<tr>
 						<td class="tg-0lax">clickImgToClose</td>
 						<td class="tg-0lax">Boolean</td>
@@ -302,12 +299,6 @@ $(document).ready(function() {
 						<td class="tg-0lax">String</td>
 						<td class="tg-0lax">'title'</td>
 						<td class="tg-0lax">The attribute to use for your titles. Can be a simple <code>title</code> attribute or an HTML5 data attribute like <code>data-lightbox-title</code> if you want something different.</td>
-					</tr>
-					<tr>
-						<td class="tg-0lax">loadingMessage</td>
-						<td class="tg-0lax">String</td>
-						<td class="tg-0lax">'Loading...'</td>
-						<td class="tg-0lax">Message displayed while the content is loading. Mostly used by images and video.</td>
 					</tr>
 					<tr>
 						<td class="tg-0lax">pdfMessage</td>
@@ -363,10 +354,9 @@ $(document).ready(function() {
 	<section id="skins" class="odd">
 		<div class="container">
 			<h3>Skins</h3>
-			<p>Skins (or themes) offer a quick method towards restyling TopBox. By its nature, TopBox is extensively customisable. If you know the basics of CSS, then you are already well on your way towards designing your own lightbox styling!</p>
+			<p>Skins (or themes) offer a quick method towards restyling TopBox. By its nature, TopBox is extensively customisable. If you know the basics of CSS, then you are already well on your way towards designing your own lightbox styling! Alterations like changing colours are quite simple to do.</p>
 
-			<p>The default skin used by TopBox is called 'Darkroom'. As the name suggests, this offers a light-on-dark colour scheme. By taking the CSS for Darkroom (towards the end of topbox.css) you can use this as a basis for creating your own skin. The
-				name of our new skin can be passed via the TopBox function (see API for details).</p>
+			<p>The default skin used by TopBox is called 'Darkroom'. As the name suggests, this offers a light-on-dark colour scheme. By taking the CSS for Darkroom (towards the end of topbox.css) you can use this as a basis for creating your own skin. Or take one of the skins listed below to rework. The name of our new skin can be passed via the TopBox function (see API for details).</p>
 
 			<p>The <code>/src/skins/</code> directory (within the TopBox source code download) provides a few ready-made lightbox styles to experiment with or modify. Skins included TopBox include:
 				<ul>
@@ -378,6 +368,7 @@ $(document).ready(function() {
 					<li>Fancyboxish (fancyboxish)</li>
 					<li>Forest (forest)</li>
 					<li>Framed (framed)</li>
+					<li>Ghost (ghost)</li>
 					<li>Half Way (half_way)</li>
 					<li>Impact (impact)</li>
 					<li>Intense Kiss (intense_kiss)</li>
@@ -388,6 +379,8 @@ $(document).ready(function() {
 					<li>Night Mode (night_mode)</li>
 					<li>Pulse (pulse)</li>
 					<li>Shadeless (shadeless)</li>
+					<li>Scribble (scribble)</li>
+					<li>Script (script)</li>
 					<li>Smart (smart)</li>
 					<li>Social (social)</li>
 					<li>Spring Pop (spring_pop)</li>
@@ -397,7 +390,9 @@ $(document).ready(function() {
 					<li>Whiteout (whiteout)</li>
 					<li>Zest (zest)</li>
 				</ul>
-				Add the call to your CSS file and change the <code>skin</code> option to correspond to the skin name, denoted in brackets, you want to use.</p>
+				Some of these skins are visual clones from other lightbox plugins. You can either copy the CSS (and any other assets like images or fonts) into your existing website theme or template. Or upload the desired skin directory to your web server and call it like this in your page:<br>
+				<pre><code>&lt;link rel="stylesheet" media="screen" href="path/to/skins/ghost/styles.css"></code></pre>
+				Within the Javascript function for TopBox, you will want to switch the skin from <code>darkroom</code> to <code>skin_name</code> replacing 'skin_name' with the name of the actual skin you want to use.</p>
 		</div>
 	</section>
 
@@ -509,7 +504,8 @@ $(document).ready(function() {
 	<script>
 		$(document).ready(function() {
 			$('.lightbox').topbox({
-				skin: 'darkroom',
+				effect: 'fade',
+				skin: 'ghost',
 				afterShowLightbox: function(lightbox){
 					const player = new Plyr('#player', {
 						/* Player options */

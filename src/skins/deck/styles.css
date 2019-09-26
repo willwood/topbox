@@ -4,7 +4,7 @@
   background-color: #000000;
 }
 
-.topbox_skin_deck .topbox_loading_message,
+.topbox_skin_deck .topbox_error,
 .topbox_skin_deck .topbox_pdf_mobile_message {
   color: #ffffff;
   font-size: 18px;

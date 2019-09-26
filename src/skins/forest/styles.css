@@ -4,7 +4,7 @@
   background-size: cover;
 }
 
-.topbox_skin_forest .topbox_loading_message,
+.topbox_skin_forest .topbox_error,
 .topbox_skin_forest .topbox_pdf_mobile_message {
   color: #ffffff;
   font-size: 18px;

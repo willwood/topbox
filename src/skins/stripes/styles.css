@@ -25,7 +25,7 @@
   transform: rotate(20deg);
 }
 
-.topbox_skin_stripes .topbox_loading_message,
+.topbox_skin_stripes .topbox_error,
 .topbox_skin_stripes .topbox_pdf_mobile_message {
   color: #ffffff;
   background-color: #000000;

@@ -17,7 +17,7 @@
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
 }
 
-.topbox_skin_social .topbox_loading_message,
+.topbox_skin_social .topbox_error,
 .topbox_skin_social .topbox_pdf_mobile_message {
   color: #000000;
   font-size: 18px;

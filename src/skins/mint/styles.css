@@ -4,7 +4,7 @@
   background: linear-gradient(0deg, rgba(221, 227, 229, 0.95) 0%, rgba(195, 206, 209, 0.95) 100%);
 }
 
-.topbox_skin_mint .topbox_loading_message,
+.topbox_skin_mint .topbox_error,
 .topbox_skin_mint .topbox_pdf_mobile_message {
   color: rgb(145, 145, 145);
   font-size: 18px;

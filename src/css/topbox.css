@@ -85,22 +85,6 @@ http://www.opensource.org/licenses/mit-license.php
   z-index: 99998;
 }
 
-.topbox_loading_message {
-  position: fixed;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: 0;
-  width: 100%;
-  text-align: center;
-  display: none;
-}
-
-.topbox_loading .topbox_loading_message {
-  display: block;
-}
-
 .topbox_nav {
   display: none;
 }

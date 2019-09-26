@@ -3,7 +3,7 @@
   background: #FFFFFF;
 }
 
-.topbox_skin_whiteout .topbox_loading_message,
+.topbox_skin_whiteout .topbox_error,
 .topbox_skin_whiteout .topbox_pdf_mobile_message {
   color: #000000;
   font-size: 18px;
