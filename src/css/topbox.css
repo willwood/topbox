@@ -115,13 +115,6 @@ http://www.opensource.org/licenses/mit-license.php
   cursor: pointer;
 }
 
-.topbox_prev:focus,
-.topbox_next:focus,
-.topbox_close:focus {
-  outline-style: dotted;
-  outline-color: red;
-}
-
 .topbox_prev {
   left: 0;
 }
