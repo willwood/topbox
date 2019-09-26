@@ -2,31 +2,43 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8" />
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>TopBox Lightbox</title>
-	<link rel="stylesheet" media="screen" href="demo/page.css" />
-	<link rel="stylesheet" media="screen" href="src/css/topbox.css" />
+	<link rel="stylesheet" media="screen" href="demo/page.css">
+	<link rel="stylesheet" media="screen" href="src/css/topbox.css">
 
 	<!-- Custom video player controls for HTML5, Vimeo and YouTube (Plyr) -->
-	<link rel="stylesheet" media="screen" href="plyr/plyr.css" />
+	<link rel="stylesheet" media="screen" href="plyr/plyr.css">
 
 	<!-- Optional skins -->
-	<link rel="stylesheet" media="screen" href="src/skins/blue_hue/styles.css" />
-	<link rel="stylesheet" media="screen" href="src/skins/eye_watering/styles.css" />
-	<link rel="stylesheet" media="screen" href="src/skins/forest/styles.css" />
-	<link rel="stylesheet" media="screen" href="src/skins/forty_five/styles.css" />
-	<link rel="stylesheet" media="screen" href="src/skins/keyboard/styles.css" />
-	<link rel="stylesheet" media="screen" href="src/skins/impact/styles.css" />
-	<link rel="stylesheet" media="screen" href="src/skins/intense_kiss/styles.css" />
-	<link rel="stylesheet" media="screen" href="src/skins/minimal/styles.css" />
-	<link rel="stylesheet" media="screen" href="src/skins/mint/styles.css" />
-	<link rel="stylesheet" media="screen" href="src/skins/monospace/styles.css" />
-	<link rel="stylesheet" media="screen" href="src/skins/pulse/styles.css" />
-	<link rel="stylesheet" media="screen" href="src/skins/spring_pop/styles.css" />
-	<link rel="stylesheet" media="screen" href="src/skins/stripes/styles.css" />
-	<link rel="stylesheet" media="screen" href="src/skins/vivid/styles.css" />
-	<link rel="stylesheet" media="screen" href="src/skins/whiteout/styles.css" />
+	<link rel="stylesheet" media="screen" href="src/skins/blocky/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/blue_hue/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/deck/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/engraved/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/eye_watering/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/fancyboxish/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/forest/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/framed/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/half_way/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/keyboard/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/lightbox/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/impact/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/intense_kiss/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/minimal/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/mint/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/monospace/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/night_mode/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/pulse/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/shadeless/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/smart/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/social/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/spring_pop/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/stripes/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/traditional/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/vivid/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/whiteout/styles.css">
+	<link rel="stylesheet" media="screen" href="src/skins/zest/styles.css">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
@@ -124,7 +136,7 @@
 				<a href="https://ted.com/talks/lloyd_treinish_this_weather_forecasting_model_is_actually_accurate?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare" class="button lightbox" title="TED Video">TED Video</a>
 				<a href="demo/pink-monster.gif" class="button lightbox" aria-haspopup="dialog" title="Animated GIF">Animated GIF</a>
 				<a href="#inline" class="button lightbox" data-lightbox-type="inline" aria-haspopup="dialog" title="Inline Content">Inline HTML Content</a>
-				<div id="inline" style="display: none;">
+				<div id="inline" style="display: none; padding:1vw;">
 					<h3>Inline Content</h3>This TopBox content type takes the ID selector name on an element on your webpage, like a container with its style set to <code>display:none</code> with CSS. TopBox opens this content within the lightbox and makes it
 					visible. Useful for simple content types, like a contact form.<br><br><strong>You can mix both text and images together, without breaking the alignment. Try resizing your screen too!</strong><br>
 					<img src="demo/pink-monster.gif" alt="Monster"><br><br>
@@ -159,7 +171,7 @@
 			<p>For example, our iFrame example above has the following markup:
 				<pre><code>&lt;a href="https://wikipedia.org" class="lightbox" title="iFrame Content" aria-haspopup="dialog" data-lightbox-type="iframe">iFrame&lt;/a></code></pre>
 			</p>
-			<p>You may be wondering what's the difference between <code>iframe</code> and <code>video-iframe</code> lightbox types? The latter has its height permanently locked to 56.25% tall (16:9 ratio) making it good to use for embedded video types like Wistia, Vidyard, and others. Some of these video providers require additional code adding to your webpage, hence we don't detect these specific video providers automatically like we do with YouTube or Vimeo.</p>
+			<p>You may be wondering what's the difference between <code>iframe</code> and <code>video-iframe</code> lightbox types? The latter has its height permanently locked to 56.25% tall (16:9 ratio) making it good to use for embedded video types like Wistia, Vidyard, and others. Some of these video providers require additional code adding to your webpage or verification of your webpage link; hence we don't detect these specific video providers automatically like we do with Brighteon, Dailymotion, YouTube or Vimeo.</p>
 			<p>
 				<p><strong>Galleries</strong><br>The example TopBoxes presented above open and close singular items. By giving two or more items a <code>data-lightbox-gallery</code> data attribute, you can effortlessly 'chain' multiple items together like
 					this, with next and previous buttons, and swipe support on touch screens:
@@ -358,22 +370,34 @@ $(document).ready(function() {
 
 			<p>The <code>/src/skins/</code> directory (within the TopBox source code download) provides a few ready-made lightbox styles to experiment with or modify. Skins included TopBox include:
 				<ul>
+					<li>Blocky (blocky)</li>
 					<li>Blue Hue (blue_hue)</li>
+					<li>Deck (deck)</li>
+					<li>Engraved (engraved)</li>
 					<li>Eye Watering (eye_watering)</li>
+					<li>Fancyboxish (fancyboxish)</li>
 					<li>Forest (forest)</li>
-					<li>Forty Five (forty_five)</li>
+					<li>Framed (framed)</li>
+					<li>Half Way (half_way)</li>
 					<li>Impact (impact)</li>
 					<li>Intense Kiss (intense_kiss)</li>
 					<li>Keyboard (keyboard)</li>
 					<li>Minimal (minimal)</li>
+					<li>Mint (mint)</li>
 					<li>Monospace (monospace)</li>
+					<li>Night Mode (night_mode)</li>
 					<li>Pulse (pulse)</li>
+					<li>Shadeless (shadeless)</li>
+					<li>Smart (smart)</li>
+					<li>Social (social)</li>
 					<li>Spring Pop (spring_pop)</li>
 					<li>Stripes (stripes)</li>
+					<li>traditional (traditional)</li>
 					<li>Vivid (vivid)</li>
 					<li>Whiteout (whiteout)</li>
+					<li>Zest (zest)</li>
 				</ul>
-				Add the call to your CSS file and change the <code>skin</code> option to correspond to the skin name you want to use. You can only use a single skin per-page.</p>
+				Add the call to your CSS file and change the <code>skin</code> option to correspond to the skin name, denoted in brackets, you want to use.</p>
 		</div>
 	</section>
 

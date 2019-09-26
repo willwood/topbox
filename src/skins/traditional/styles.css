@@ -1,0 +1,86 @@
+/* Our lightbox skin named 'traditional' */
+.topbox_skin_traditional .topbox_fill {
+  background: rgba(0, 0, 0, 0.90);
+}
+
+.topbox_skin_traditional .topbox_loading_message,
+.topbox_skin_traditional .topbox_pdf_mobile_message {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.topbox_skin_traditional a.topbox_pdf_mobile_button,
+.topbox_skin_traditional a.topbox_pdf_mobile_button:visited {
+  color: #ffffff;
+  border-radius: 1rem;
+  border: 2px solid #ffffff;
+  text-decoration: none;
+  transition: all 300ms ease-in;
+  padding: 1rem;
+  line-height: 1;
+  display: block;
+  margin-top: 1rem;
+}
+
+.topbox_skin_traditional .topbox_nav {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.topbox_skin_traditional .topbox_prev,
+.topbox_skin_traditional .topbox_next,
+.topbox_skin_traditional .topbox_close {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  color: #191919;
+  background: #ffffff;
+  transition: all 100ms ease-in;
+  line-height: 1.4;
+  text-align: center;
+  padding: 10px;
+}
+
+.topbox_skin_traditional .topbox_prev:hover,
+.topbox_skin_traditional .topbox_next:hover,
+.topbox_skin_traditional .topbox_close:hover {
+  color: #919191;
+  background: #ffffff;
+}
+
+.topbox_skin_traditional .topbox_close,
+.topbox_skin_traditional .topbox_close:hover {}
+
+.topbox_skin_traditional .topbox_prev:before {
+  content: attr(title);
+}
+
+.topbox_skin_traditional .topbox_next:before {
+  content: attr(title);
+}
+
+.topbox_skin_traditional .topbox_close:before {
+  content: attr(title);
+}
+
+.topbox_skin_traditional .topbox_title_wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.topbox_skin_traditional .topbox_title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.4;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  background: #ffffff;
+  color: #191919;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+}

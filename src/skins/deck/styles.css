@@ -1,0 +1,96 @@
+/* Our lightbox skin named 'deck' */
+.topbox_skin_deck .topbox_fill {
+  background-image: url(deck.png);
+  background-color: #000000;
+}
+
+.topbox_skin_deck .topbox_loading_message,
+.topbox_skin_deck .topbox_pdf_mobile_message {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.topbox_skin_deck a.topbox_pdf_mobile_button,
+.topbox_skin_deck a.topbox_pdf_mobile_button:visited {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  text-decoration: none;
+  transition: all 300ms ease-in;
+  padding: 1rem;
+  line-height: 1;
+  display: block;
+  margin-top: 1rem;
+}
+
+.topbox_skin_deck .topbox_nav {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.topbox_skin_deck .topbox_prev,
+.topbox_skin_deck .topbox_next,
+.topbox_skin_deck .topbox_close {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  text-decoration: none;
+  font-size: 45px;
+  color: #ffffff;
+  background: #000000;
+  transition: all 300ms ease-in;
+  width: 55px;
+  line-height: 55px;
+  text-align: center;
+}
+
+.topbox_skin_deck .topbox_close {
+  line-height: 65px;
+  margin-top: -10px;
+}
+
+.topbox_skin_deck .topbox_prev:hover,
+.topbox_skin_deck .topbox_next:hover,
+.topbox_skin_deck .topbox_close:hover {
+  color: #cdcdcd;
+}
+
+.topbox_skin_deck .topbox_prev:before {
+  content: "←"
+}
+
+.topbox_skin_deck .topbox_next:before {
+  content: "→"
+}
+
+.topbox_skin_deck .topbox_close:before {
+  content: "×";
+}
+
+.topbox_skin_deck .topbox_title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  background: none;
+  color: #ffffff;
+  background: #000000;
+  padding: 10px 20px;
+  margin-top: 7px;
+  text-align: center;
+  display: inline-block;
+}
+
+.topbox_skin_deck .topbox_image,
+.topbox_skin_deck .topbox_html5audio,
+.topbox_skin_deck .topbox_html5video,
+.topbox_skin_deck .topbox_embedded_web_video,
+.topbox_skin_deck .plyr,
+.topbox_skin_deck .topbox_ajax,
+.topbox_skin_deck .topbox_inline,
+.topbox_skin_deck .topbox_ajax,
+.topbox_skin_deck .topbox_pdf_wrap,
+.topbox_skin_deck .topbox_iframe_wrap,
+.topbox_skin_deck .topbox_video_iframe_wrap {
+  box-shadow: 0px 0px 40px 20px rgba(0, 0, 0, 0.8);
+}

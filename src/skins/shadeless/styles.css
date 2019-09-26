@@ -1,0 +1,125 @@
+/* Our shadeless skin named 'shadeless' */
+.topbox_skin_shadeless .topbox_fill {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.topbox_skin_shadeless .topbox_loading_message,
+.topbox_skin_shadeless .topbox_pdf_mobile_message {
+  color: #000000;
+  font-size: 18px;
+}
+
+.topbox_skin_shadeless a.topbox_pdf_mobile_button,
+.topbox_skin_shadeless a.topbox_pdf_mobile_button:visited {
+  color: #000000;
+  border-radius: 1rem;
+  border: 2px solid #000000;
+  text-decoration: none;
+  transition: all 300ms ease-in;
+  padding: 1rem;
+  line-height: 1;
+  display: block;
+  margin-top: 1rem;
+}
+
+.topbox_skin_shadeless .topbox_nav {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.topbox_skin_shadeless .topbox_prev,
+.topbox_skin_shadeless .topbox_next,
+.topbox_skin_shadeless .topbox_close {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  text-decoration: none;
+  font-size: 35px;
+  color: #ffffff;
+  background-color: #808080;
+  transition: all 100ms ease-in-out;
+  width: 45px;
+  height: 90px;
+  line-height: 90px;
+  line-height: 1;
+  margin: 15px;
+}
+
+.topbox_skin_shadeless .topbox_prev {
+  text-align: left;
+  font-size: 25px;
+}
+
+.topbox_skin_shadeless .topbox_next {
+  text-align: right;
+  font-size: 25px;
+}
+
+.topbox_skin_shadeless .topbox_close {
+  height: 45px;
+  line-height: 45px;
+}
+
+.topbox_skin_shadeless .topbox_prev:hover,
+.topbox_skin_shadeless .topbox_next:hover,
+.topbox_skin_shadeless .topbox_close:hover {
+  color: #eaeaea;
+}
+
+.topbox_skin_shadeless .topbox_prev:before {
+  content: "◄";
+  position: absolute;
+  top: 30px;
+  left: 8px;
+}
+
+.topbox_skin_shadeless .topbox_next:before {
+  content: "►";
+  position: absolute;
+  top: 30px;
+  right: 8px;
+}
+
+.topbox_skin_shadeless .topbox_close:before {
+  content: "✕";
+  position: absolute;
+  top: -3px;
+  left: 12px;
+}
+
+.topbox_skin_shadeless .topbox_title_wrap {
+  padding: 10px;
+  background-color: #808080;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.topbox_skin_shadeless .topbox_title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: normal;
+  background: none;
+  color: #ffffff;
+  padding: 3px 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+.topbox_skin_shadeless .topbox_image,
+.topbox_skin_shadeless .topbox_html5audio,
+.topbox_skin_shadeless .topbox_html5video,
+.topbox_skin_shadeless .topbox_embedded_web_video,
+.topbox_skin_shadeless .plyr,
+.topbox_skin_shadeless .topbox_ajax,
+.topbox_skin_shadeless .topbox_inline,
+.topbox_skin_shadeless .topbox_ajax,
+.topbox_skin_shadeless .topbox_pdf_wrap,
+.topbox_skin_shadeless .topbox_iframe_wrap,
+.topbox_skin_shadeless .topbox_video_iframe_wrap {
+  -webkit-box-shadow: 0 0 3.125em rgba(0, 0, 0, .75);
+  box-shadow: 0 0 3.125em rgba(0, 0, 0, .75);
+}

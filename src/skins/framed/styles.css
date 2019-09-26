@@ -1,0 +1,98 @@
+/* Our lightbox skin named 'framed' */
+.topbox_skin_framed .topbox_fill {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.topbox_skin_framed .topbox_loading_message,
+.topbox_skin_framed .topbox_pdf_mobile_message {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.topbox_skin_framed a.topbox_pdf_mobile_button,
+.topbox_skin_framed a.topbox_pdf_mobile_button:visited {
+  color: #ffffff;
+  border-radius: 1rem;
+  border: 2px solid #ffffff;
+  text-decoration: none;
+  transition: all 300ms ease-in;
+  padding: 1rem;
+  line-height: 1;
+  display: block;
+  margin-top: 1rem;
+}
+
+.topbox_skin_framed .topbox_prev,
+.topbox_skin_framed .topbox_next,
+.topbox_skin_framed .topbox_close {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  text-decoration: none;
+  font-size: 45px;
+  color: #ffffff;
+  background: none;
+  transition: all 100ms ease-in-out;
+  width: 55px;
+  line-height: 55px;
+  text-align: center;
+}
+
+.topbox_skin_framed .topbox_prev:hover,
+.topbox_skin_framed .topbox_next:hover,
+.topbox_skin_framed .topbox_close:hover {
+  color: #cdcdcd;
+}
+
+.topbox_skin_framed .topbox_prev {
+  top: 5px;
+  right: 112px;
+  left: auto;
+}
+
+.topbox_skin_framed .topbox_next {
+  top: 5px;
+  right: 56px;
+}
+
+.topbox_skin_framed .topbox_close {
+  top: 2px;
+  font-size: 55px;
+}
+
+.topbox_skin_framed .topbox_prev:before {
+  content: "←";
+}
+
+.topbox_skin_framed .topbox_next:before {
+  content: "→"
+}
+
+.topbox_skin_framed .topbox_close:before {
+  content: "✕";
+}
+
+.topbox_skin_framed .topbox_title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.4;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: normal;
+  background: none;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+}
+
+.topbox_skin_framed .topbox_image,
+.topbox_skin_framed .topbox_html5audio,
+.topbox_skin_framed .topbox_html5video,
+.topbox_skin_framed .topbox_embedded_web_video,
+.topbox_skin_framed .plyr,
+.topbox_skin_framed .topbox_ajax,
+.topbox_skin_framed .topbox_inline,
+.topbox_skin_framed .topbox_ajax,
+.topbox_skin_framed .topbox_pdf_wrap,
+.topbox_skin_framed .topbox_iframe_wrap,
+.topbox_skin_framed .topbox_video_iframe_wrap {
+  padding: 15px;
+}

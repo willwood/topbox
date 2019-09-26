@@ -1,0 +1,100 @@
+/* Our lightbox skin named 'blocky' */
+.topbox_skin_blocky .topbox_fill {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.topbox_skin_blocky .topbox_loading_message,
+.topbox_skin_blocky .topbox_pdf_mobile_message {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.topbox_skin_blocky a.topbox_pdf_mobile_button,
+.topbox_skin_blocky a.topbox_pdf_mobile_button:visited {
+  color: #ffffff;
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  text-decoration: none;
+  transition: all 300ms ease-in;
+  padding: 1rem;
+  line-height: 1;
+  display: block;
+  margin-top: 1rem;
+}
+
+.topbox_skin_blocky .topbox_nav {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.topbox_skin_blocky .topbox_prev,
+.topbox_skin_blocky .topbox_next,
+.topbox_skin_blocky .topbox_close {
+  text-decoration: none;
+  font-size: 45px;
+  color: #ffffff;
+  background: #000000;
+  transition: all 300ms ease-in;
+  width: 55px;
+  line-height: 55px;
+  text-align: center;
+}
+
+.topbox_skin_blocky .topbox_close {
+  line-height: 65px;
+  margin-top: -10px;
+}
+
+.topbox_skin_blocky .topbox_prev:hover,
+.topbox_skin_blocky .topbox_next:hover,
+.topbox_skin_blocky .topbox_close:hover {
+  color: #cdcdcd;
+}
+
+.topbox_skin_blocky .topbox_prev:before {
+  content: "◀"
+}
+
+.topbox_skin_blocky .topbox_next:before {
+  content: "▶"
+}
+
+.topbox_skin_blocky .topbox_close:before {
+  content: "×";
+}
+
+.topbox_skin_blocky .topbox_title_wrap {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.topbox_skin_blocky .topbox_title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  background: none;
+  color: #ffffff;
+  background: #000000;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+.topbox_skin_blocky .topbox_image,
+.topbox_skin_blocky .topbox_html5audio,
+.topbox_skin_blocky .topbox_html5video,
+.topbox_skin_blocky .topbox_embedded_web_video,
+.topbox_skin_blocky .plyr,
+.topbox_skin_blocky .topbox_ajax,
+.topbox_skin_blocky .topbox_inline,
+.topbox_skin_blocky .topbox_ajax,
+.topbox_skin_blocky .topbox_pdf_wrap,
+.topbox_skin_blocky .topbox_iframe_wrap,
+.topbox_skin_blocky .topbox_video_iframe_wrap {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
