@@ -1,4 +1,4 @@
-/* Our shadeless skin named 'shadeless' */
+/* Our lightbox skin named 'shadeless' */
 .topbox_skin_shadeless .topbox_fill {
   background-color: rgba(255, 255, 255, 0);
 }
@@ -55,36 +55,74 @@
   font-size: 25px;
 }
 
+.topbox_skin_shadeless .topbox_prev:hover,
+.topbox_skin_shadeless .topbox_next:hover,
+.topbox_skin_shadeless .topbox_close:hover {
+  color: #cdcdcd;
+}
+
+.topbox_skin_shadeless .topbox_prev:before {
+  content: ' ';
+  position: absolute;
+  top: 29px;
+  left: 13px;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #fff;
+}
+
+.topbox_skin_shadeless .topbox_prev:hover:before {
+  border-right: 15px solid #cdcdcd;
+  transition: all 200ms ease-in-out;
+}
+
+.topbox_skin_shadeless .topbox_next:before {
+  content: ' ';
+  position: absolute;
+  top: 29px;
+  right: 13px;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #fff;
+}
+
+.topbox_skin_shadeless .topbox_next:hover:before {
+  border-left: 15px solid #cdcdcd;
+  transition: all 200ms ease-in-out;
+}
+
 .topbox_skin_shadeless .topbox_close {
   height: 45px;
   line-height: 45px;
 }
 
-.topbox_skin_shadeless .topbox_prev:hover,
-.topbox_skin_shadeless .topbox_next:hover,
-.topbox_skin_shadeless .topbox_close:hover {
-  color: #eaeaea;
+.topbox_skin_shadeless .topbox_close:before,
+.topbox_skin_shadeless .topbox_close:after {
+  position: absolute;
+  top: 6px;
+  left: 21px;
+  content: ' ';
+  height: 33px;
+  width: 4px;
+  background-color: #fff;
 }
 
-.topbox_skin_shadeless .topbox_prev:before {
-  content: "◄";
-  position: absolute;
-  top: 30px;
-  left: 8px;
-}
-
-.topbox_skin_shadeless .topbox_next:before {
-  content: "►";
-  position: absolute;
-  top: 30px;
-  right: 8px;
+.topbox_skin_shadeless .topbox_close:hover:before,
+.topbox_skin_shadeless .topbox_close:hover:after {
+  background-color: #cdcdcd;
+  transition: all 200ms ease-in-out;
 }
 
 .topbox_skin_shadeless .topbox_close:before {
-  content: "✕";
-  position: absolute;
-  top: -3px;
-  left: 12px;
+  transform: rotate(45deg);
+}
+
+.topbox_skin_shadeless .topbox_close:after {
+  transform: rotate(-45deg);
 }
 
 .topbox_skin_shadeless .topbox_title_wrap {
