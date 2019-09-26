@@ -1,4 +1,4 @@
-/* Our engraved skin named 'engraved' */
+/* Our lightbox skin named 'engraved' */
 .topbox_skin_engraved .topbox_fill {
   background: rgba(33, 33, 33, 0.95);
 }
@@ -55,16 +55,6 @@
   color: #ffffff;
 }
 
-.topbox_skin_engraved .topbox_prev:focus,
-.topbox_skin_engraved .topbox_next:focus,
-.topbox_skin_engraved .topbox_close:focus,
-.topbox_skin_engraved .topbox_prev:active,
-.topbox_skin_engraved .topbox_next:active,
-.topbox_skin_engraved .topbox_close:active {
-  outline: none;
-  border: none;
-}
-
 .topbox_skin_engraved .topbox_prev:before {
   content: "←";
   position: absolute;
@@ -75,16 +65,36 @@
 .topbox_skin_engraved .topbox_next:before {
   content: "→";
   position: absolute;
-  left: 12px;
+  right: 11px;
   top: 0;
 }
 
-.topbox_skin_engraved .topbox_close:before {
-  content: "×";
+.topbox_skin_engraved .topbox_close:before,
+.topbox_skin_engraved .topbox_close:after {
   position: absolute;
-  left: 13px;
-  top: -4px;
+  top: 13px;
+  left: 25px;
+  content: ' ';
+  height: 28px;
+  width: 4px;
+  background-color: #929292;
 }
+
+.topbox_skin_engraved .topbox_close:hover:before,
+.topbox_skin_engraved .topbox_close:hover:after {
+  background-color: #ffffff;
+  transition: all 100ms ease-in-out;
+}
+
+.topbox_skin_engraved .topbox_close:before {
+  transform: rotate(45deg);
+}
+
+.topbox_skin_engraved .topbox_close:after {
+  transform: rotate(-45deg);
+}
+
+
 
 .topbox_skin_engraved .topbox_title {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
