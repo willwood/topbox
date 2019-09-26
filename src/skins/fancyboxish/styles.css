@@ -29,7 +29,7 @@
   transform: translateY(-50%);
 }
 
-.topbox_skin_fancyboxish .topbox_prev,
+/* .topbox_skin_fancyboxish .topbox_prev,
 .topbox_skin_fancyboxish .topbox_next,
 .topbox_skin_fancyboxish .topbox_close {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -93,7 +93,101 @@
   bottom: 0;
   left: 0;
   width: 100%;
+} */
+
+
+
+
+
+.topbox_skin_fancyboxish .topbox_prev,
+.topbox_skin_fancyboxish .topbox_next,
+.topbox_skin_fancyboxish .topbox_close {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  text-decoration: none;
+  font-size: 45px;
+  color: #ffffff;
+  background: #000000;
+  border: 4px solid #ffffff;
+  transition: all 100ms ease-in-out;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  line-height: 1;
+  border-radius: 50%;
+  margin: 15px;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.4);
 }
+
+.topbox_skin_fancyboxish .topbox_prev:before {
+  content: ' ';
+  position: absolute;
+  top: 4px;
+  left: 7px;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-right: 9px solid #fff;
+}
+
+.topbox_skin_fancyboxish .topbox_prev:hover:before {
+  border-right: 9px solid #eaeaea;
+  transition: all 200ms ease-in-out;
+}
+
+.topbox_skin_fancyboxish .topbox_next:before {
+  content: ' ';
+  position: absolute;
+  top: 4px;
+  right: 7px;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 9px solid #fff;
+}
+
+.topbox_skin_fancyboxish .topbox_next:hover:before {
+  border-left: 9px solid #eaeaea;
+  transition: all 200ms ease-in-out;
+}
+
+.topbox_skin_fancyboxish .topbox_close:before,
+.topbox_skin_fancyboxish .topbox_close:after {
+  position: absolute;
+  top: 4px;
+  left: 12px;
+  content: ' ';
+  height: 18px;
+  width: 4px;
+  background-color: #fff;
+}
+
+.topbox_skin_fancyboxish .topbox_close:hover:before,
+.topbox_skin_fancyboxish .topbox_close:hover:after {
+  background-color: #eaeaea;
+  transition: all 200ms ease-in-out;
+}
+
+.topbox_skin_fancyboxish .topbox_close:before {
+  transform: rotate(45deg);
+}
+
+.topbox_skin_fancyboxish .topbox_close:after {
+  transform: rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .topbox_skin_fancyboxish .topbox_title {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
