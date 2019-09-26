@@ -621,7 +621,7 @@ $(document).ready(function() {
 
     showLightbox: function(e) {
       var $this = this,
-      currentLink = this.$el;
+        currentLink = this.$el;
 
       // Check content
       var check = this.checkContent(currentLink);
@@ -681,8 +681,8 @@ $(document).ready(function() {
 
     checkContent: function(link) {
       var $this = this,
-      href = link.attr('href'),
-      video = href.match(/(youtube|youtube-nocookie|youtu|vimeo)\.(com|be|ly|tv)\/((watch\?v=([\w-]+))|([\w-]+))/);
+        href = link.attr('href'),
+        video = href.match(/(youtube|youtube-nocookie|youtu|vimeo)\.(com|be|ly|tv)\/((watch\?v=([\w-]+))|([\w-]+))/);
       videoOther = href.match(/(dai|brighteon|ted)\.(com|be|ly|tv|net)\/((talks\/([\w-]+))|([\w-]+))/);
 
       if (href.match(/\.(jpeg|jpg|gif|png|tiff|svg|webp)$/i) !== null) {
@@ -739,8 +739,8 @@ $(document).ready(function() {
 
     processContent: function(content, link) {
       var $this = this,
-      href = link.attr('href'),
-      video = href.match(/(youtube|youtube-nocookie|youtu|vimeo)\.(com|be|ly|tv)\/((watch\?v=([\w-]+))|([\w-]+))/);
+        href = link.attr('href'),
+        video = href.match(/(youtube|youtube-nocookie|youtu|vimeo)\.(com|be|ly|tv)\/((watch\?v=([\w-]+))|([\w-]+))/);
       videoOther = href.match(/(dai|brighteon|ted)\.(com|be|net|ly|tv)\/((talks\/([\w-]+))|([\w-]+))/);
 
       // Is HiDPI?
@@ -1025,13 +1025,13 @@ $(document).ready(function() {
       });
 
       // Lock keyboard / tab focus to TopBox (prevents a user being able to tab behind the open lightbox)
-      $("*[tabindex]").each(function (i) {
+      $("*[tabindex]").each(function(i) {
         // Store tabindex as data and change all instances to -1
         $(this).data('tabindex', $(this).attr('tabindex')).attr('tabindex', '-1');
       });
       $(".topbox_overlay *[tabindex]").each(function(index) {
-          // Restore any tabindex in TopBox back to their defaults, e.g. close button 1, prev 2, next 3
-          $(this).attr('tabindex', $(this).data('tabindex'));
+        // Restore any tabindex in TopBox back to their defaults, e.g. close button 1, prev 2, next 3
+        $(this).attr('tabindex', $(this).data('tabindex'));
       });
 
       return overlay;
@@ -1053,7 +1053,7 @@ $(document).ready(function() {
       $('.topbox_content').empty();
 
       // Restore tabindex values
-      $("*[tabindex]").each(function (i) {
+      $("*[tabindex]").each(function(i) {
         $(this).attr('tabindex', $(this).data('tabindex'));
       });
 
