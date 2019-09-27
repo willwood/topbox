@@ -70,8 +70,6 @@ http://www.opensource.org/licenses/mit-license.php
 }
 
 .topbox_content {
-  width: auto;
-  height: auto;
   position: relative;
   z-index: 99998;
   height: 80vh;
@@ -162,6 +160,11 @@ http://www.opensource.org/licenses/mit-license.php
   width: 100%;
   height: 100%;
   display: block;
+}
+
+.topbox_pdf_mobile_message {
+  display: inline-block;
+  margin: auto;
 }
 
 .topbox_embedded_web_video {
@@ -304,7 +307,6 @@ https://github.com/sampotts/plyr
   background: rgba(0, 0, 0, 0.8);
 }
 
-.topbox_skin_darkroom .topbox_loading_message,
 .topbox_skin_darkroom .topbox_pdf_mobile_message {
   color: #FFFFFF;
   font-size: 18px;

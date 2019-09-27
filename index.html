@@ -77,7 +77,7 @@
 					<li>Vimeo and YouTube video embeds support SSL protocol and autoplay.</li>
 					<li>Major changes to content positioning. Less Javascript, more CSS Flexbox!</li>
 					<li>Deleted older hacks and prefixes for obsolete web browsers (like Internet Explorer).</li>
-					<li>Added HTML5 Audio, Dailymotion, SVG, TED, Brighteon, PDF embed and WebP image support.</li>
+					<li>Added HTML5 Audio, Dailymotion, SVG, TED, Brighteon, PDF, iFrame video and WebP support.</li>
 					<li>Easier translation of lightbox user interface tooltips into different languages.</li>
 					<li>Greater control over the attributes used for lightbox triggering and captioning.</li>
 					<li>Various accessibility improvements, including features like keyboard focus and ARIA labels.</li>
@@ -127,9 +127,9 @@
 			<div class="button-group">
 				<a href="demo/landscape.jpg" class="button lightbox" aria-haspopup="dialog" title="Landscape Image">Landscape Image</a>
 				<a href="demo/portrait.jpg" class="button lightbox" aria-haspopup="dialog" title="Portrait Image">Portrait Image</a>
-				<a href="demo/image-standard.jpg" data-lightbox-hidpi="demo/image-retina@2x.jpg" class="button lightbox" aria-haspopup="dialog" title="Hi-Res Image">Hi-Res Image</a>
 				<a href="demo/world-map.svg" class="button lightbox" aria-haspopup="dialog" title="SVG">SVG</a>
 				<a href="demo/crow.mp3" class="button lightbox" aria-haspopup="dialog" title="HTML5 Audio MP3">HTML5 Audio</a>
+				<a href="demo/video.mp4" class="button lightbox" aria-haspopup="dialog" title="HTML5 Video MP4">HTML5 Video</a>
 				<a href="https://www.openstreetmap.org/export/embed.html?bbox=-79.7545623779297%2C43.432977075795606%2C-79.19151306152345%2C43.874138181474734&amp;layer=mapnik" class="button lightbox" aria-haspopup="dialog" title="Open Street Map (using an iFrame embed link)"
 					data-lightbox-type="iframe">Open Street Map</a>
 				<a href="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d199976.76838191133!2d-114.21423658002013!3d51.0130332588373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2suk!4v1547414092516" class="button lightbox" aria-haspopup="dialog"
@@ -148,15 +148,14 @@
 				<a href="https://dai.ly/x6bqjif" class="button lightbox" aria-haspopup="dialog" title="Dailymotion Video">Dailymotion Video</a>
 				<a href="https://www.brighteon.com/5995999748001" class="button lightbox" aria-haspopup="dialog" title="Brighteon Video">Brighteon Video</a>
 				<a href="https://fast.wistia.net/embed/iframe/g5pnf59ala?videoFoam=true&autoPlay=true&playerColor=007dc1" class="button lightbox" aria-haspopup="dialog" data-lightbox-type="video-iframe" title="Wistia Video (using an iFrame embed link)">Wistia Video</a>
-				<a href="demo/bowmans-nose.webp" class="button lightbox" aria-haspopup="dialog" title="WebP Image (Note: requires a compatible browser with WebP support)">WebP Image</a>
+				<a href="demo/anglesey.webp" class="button lightbox" aria-haspopup="dialog" title="WebP Image (Note: requires a compatible browser with WebP support)">WebP Image</a>
 				<a href="demo/ajax-test.txt" class="button lightbox" aria-haspopup="dialog" data-lightbox-type="ajax" title="AJAX Content">AJAX Content</a>
 				<a href="demo/scrolling-test.txt" class="button lightbox" aria-haspopup="dialog" data-lightbox-type="ajax" title="Scrolling Content">Scrolling Text Content</a>
 				<a href="https://wikipedia.org" class="button lightbox" aria-haspopup="dialog" data-lightbox-type="iframe" title="iFrame Content">iFrame</a>
-				<a href="demo/video.mp4" class="button lightbox" aria-haspopup="dialog" title="HTML5 Video MP4">HTML5 Video</a>
 				<a href="demo/test-document.pdf" class="button lightbox" aria-haspopup="dialog" title="PDF Embed">PDF Document Embed</a>
 				<a href="demo/not-found.jpg" class="button lightbox" aria-haspopup="dialog" title="Not Found">Not Found (404)</a>
 			</div>
-			<p>Tip: The HTML5 Video, Vimeo and YouTube examples here use custom controls via the excellent <a href="https://plyr.io/">Plyr plugin</a>. Setup of this plugin to work with TopBox is documented <a href="#custom-video-controls">here</a>.</p>
+			<p>Tip: The HTML5 Audio, HTML5 Video, Vimeo and YouTube examples here use custom controls via the excellent <a href="https://plyr.io/">Plyr plugin</a>. Setup of this plugin to work with TopBox is documented <a href="#custom-video-controls">here</a>.</p>
 
 		</div>
 	</section>
@@ -174,24 +173,17 @@
 			<p>For example, our iFrame example above has the following markup:
 				<pre><code>&lt;a href="https://wikipedia.org" class="lightbox" title="iFrame Content" aria-haspopup="dialog" data-lightbox-type="iframe">iFrame&lt;/a></code></pre>
 			</p>
-			<p>You may be wondering what's the difference between <code>iframe</code> and <code>video-iframe</code> lightbox types? The latter has its height permanently locked to 56.25% tall (16:9 ratio) making it good to use for embedded video types like Wistia, Vidyard, and others. Some of these video providers require additional code adding to your webpage or verification of your webpage link; hence we don't detect these specific video providers automatically like we do with Brighteon, Dailymotion, YouTube or Vimeo.</p>
+			<p>You may be wondering what's the difference between <code>iframe</code> and <code>video-iframe</code> lightbox types? The latter has its height permanently locked to 56.25% tall (16:9 ratio) making it good to use for embedded video types like Internet Archive, Veoh, Vidyard, Wistia, and many others. Some of these video providers require additional code adding to your webpage or verification of your webpage link; hence we don't detect these specific video providers automatically like we do with Brighteon, Dailymotion, YouTube or Vimeo.</p>
 			<p>
 				<p><strong>Galleries</strong><br>The example TopBoxes presented above open and close singular items. By giving two or more items a <code>data-lightbox-gallery</code> data attribute, you can effortlessly 'chain' multiple items together like
 					this, with next and previous buttons, and swipe support on touch screens:
 					<pre><code>&lt;a href="path/to/my-image.jpg" class="lightbox" aria-haspopup="dialog" data-lightbox-gallery="gallery1">Click me!&lt;/a></code></pre>
-					<a href="demo/gallery-image-1.jpg" class="button lightbox" aria-haspopup="dialog" data-lightbox-gallery="mygallery" title="1 / 5">Example Gallery</a>
+					<a href="demo/gallery-image-1.jpg" class="button lightbox" aria-haspopup="dialog" data-lightbox-gallery="mygallery" title="1 / 5">Example Image Gallery</a>
 					<a href="demo/gallery-image-2.jpg" class="lightbox" aria-haspopup="dialog" data-lightbox-gallery="mygallery" title="2 / 5" hidden>Example Gallery</a>
 					<a href="demo/gallery-image-3.jpg" class="lightbox" aria-haspopup="dialog" data-lightbox-gallery="mygallery" title="3 / 5" hidden>Example Gallery</a>
 					<a href="demo/gallery-image-4.jpg" class="lightbox" aria-haspopup="dialog" data-lightbox-gallery="mygallery" title="4 / 5" hidden>Example Gallery</a>
 					<a href="demo/gallery-image-5.jpg" class="lightbox" aria-haspopup="dialog" data-lightbox-gallery="mygallery" title="5 / 5" hidden>Example Gallery</a>
 				</p>
-				<p>
-					<p><strong>Retina Display Images</strong><br>High-resolution images (optimised for retina displays) are supported too. Within your link markup for opening a standard resolution image, add a <code>data-lightbox-gallery</code> data attribute
-						like this:
-						<pre><code>&lt;a href="path/to/my-image.jpg" data-lightbox-hidpi="path/to/my-image@2x.jpg" class="lightbox">Click me!&lt;/a></code></pre>
-						A high resolution image continues to be saved in either JPG or PNG format at 72 dpi. However it is typically double height and width of the standard resolution image. The image <code>src</code> is swapped for the high-resolution variant
-						on retina displays.
-					</p>
 		</div>
 	</section>
 
@@ -243,7 +235,7 @@ $(document).ready(function() {
 						<td class="tg-0lax">effect</td>
 						<td class="tg-0lax">String</td>
 						<td class="tg-0lax">'fade'</td>
-						<td class="tg-0lax">The opening CSS transition effect. Can be one of either <code>none</code>, <code>fade</code>, <code>slideLeft</code>, <code>slideDown</code>, or <code>slideUp</code>.</td>
+						<td class="tg-0lax">The opening CSS transition effect. Can be one of either <code>none</code>, <code>fade</code>, <code>slideLeft</code>, <code>slideRight</code>, <code>slideDown</code>, or <code>slideUp</code>.</td>
 					</tr>
 					<tr>
 						<td class="tg-0lax">backgroundBlur</td>
@@ -505,7 +497,7 @@ $(document).ready(function() {
 		$(document).ready(function() {
 			$('.lightbox').topbox({
 				effect: 'fade',
-				skin: 'ghost',
+				skin: 'darkroom',
 				afterShowLightbox: function(lightbox){
 					const player = new Plyr('#player', {
 						/* Player options */

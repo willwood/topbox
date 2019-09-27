@@ -743,11 +743,6 @@ $(document).ready(function() {
         video = href.match(/(youtube|youtube-nocookie|youtu|vimeo)\.(com|be|ly|tv)\/((watch\?v=([\w-]+))|([\w-]+))/);
       videoOther = href.match(/(dai|brighteon|ted)\.(com|be|net|ly|tv)\/((talks\/([\w-]+))|([\w-]+))/);
 
-      // Is HiDPI?
-      if (this.isHidpi() && link.attr('data-lightbox-hidpi')) {
-        href = link.attr('data-lightbox-hidpi');
-      }
-
       // Image
       if (href.match(/\.(jpeg|jpg|gif|png|tiff|svg|webp)$/i) !== null) {
         var imgtag = $('<img>', {
@@ -1059,16 +1054,6 @@ $(document).ready(function() {
 
       this.options.afterHideLightbox.call(this);
     },
-
-    isHidpi: function() {
-      var mediaQuery = "(-webkit-min-device-pixel-ratio: 1.5),\
-                              (min--moz-device-pixel-ratio: 1.5),\
-                              (-o-min-device-pixel-ratio: 3/2),\
-                              (min-resolution: 1.5dppx)";
-      if (window.devicePixelRatio > 1) return true;
-      if (window.matchMedia && window.matchMedia(mediaQuery).matches) return true;
-      return false;
-    }
 
   };
 
