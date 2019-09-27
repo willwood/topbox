@@ -1,29 +1,29 @@
 /* Our lightbox skin named 'pulse' */
 @-webkit-keyframes pulse {
   0% {
-    background-color: #45CEEF;
+    background-color: rgba(69,206,239,0.95);
   }
 
   25% {
-    background-color: #FFF5A5;
+    background-color: rgba(255,245,165,0.95);
   }
 
   50% {
-    background-color: #FFD4DA;
+    background-color: rgba(255,212,218,0.95);
   }
 
   75% {
-    background-color: #99D2E4;
+    background-color: rgba(153,210,228,0.95);
   }
 
   100% {
-    background-color: #D8CAB4;
+    background-color: rgba(216,202,180,0.95);
   }
 }
 
 .topbox_skin_pulse .topbox_fill {
   -webkit-animation: pulse 60s infinite alternate;
-  background-color: #45CEEF;
+  background-color: rgba(69,206,239,0.95);
 }
 
 .topbox_skin_pulse .topbox_error,
@@ -101,4 +101,18 @@
   text-align: center;
   display: inline-block;
   text-shadow: 1px 1px 1px #ffffff;
+}
+
+.topbox_skin_pulse .topbox_image,
+.topbox_skin_pulse .topbox_html5audio,
+.topbox_skin_pulse .topbox_html5video,
+.topbox_skin_pulse .topbox_embedded_web_video,
+.topbox_skin_pulse .plyr,
+.topbox_skin_pulse .topbox_ajax,
+.topbox_skin_pulse .topbox_inline,
+.topbox_skin_pulse .topbox_ajax,
+.topbox_skin_pulse .topbox_pdf_wrap,
+.topbox_skin_pulse .topbox_iframe_wrap,
+.topbox_skin_pulse .topbox_video_iframe_wrap {
+  box-shadow: 0px 0px 4px 2px rgba(94,94,94,0.3);
 }
