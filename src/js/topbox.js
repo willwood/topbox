@@ -681,8 +681,8 @@ $(document).ready(function() {
 
     checkContent: function(link) {
       var $this = this,
-        href = link.attr('href'),
-        video = href.match(/(youtube|youtube-nocookie|youtu|vimeo)\.(com|be|ly|tv)\/((watch\?v=([\w-]+))|([\w-]+))/);
+      href = link.attr('href'),
+      video = href.match(/(youtube|youtube-nocookie|youtu|vimeo)\.(com|be|ly|tv)\/((watch\?v=([\w-]+))|(embed\/([\w-]+))|([\w-]+))/);
       videoOther = href.match(/(dai|brighteon|ted)\.(com|be|ly|tv|net)\/((talks\/([\w-]+))|([\w-]+))/);
 
       if (href.match(/\.(jpeg|jpg|gif|png|tiff|svg|webp)$/i) !== null) {
@@ -739,8 +739,8 @@ $(document).ready(function() {
 
     processContent: function(content, link) {
       var $this = this,
-        href = link.attr('href'),
-        video = href.match(/(youtube|youtube-nocookie|youtu|vimeo)\.(com|be|ly|tv)\/((watch\?v=([\w-]+))|([\w-]+))/);
+      href = link.attr('href'),
+      video = href.match(/(youtube|youtube-nocookie|youtu|vimeo)\.(com|be|ly|tv)\/((watch\?v=([\w-]+))|(embed\/([\w-]+))|([\w-]+))/);
       videoOther = href.match(/(dai|brighteon|ted)\.(com|be|net|ly|tv)\/((talks\/([\w-]+))|([\w-]+))/);
 
       // Image
@@ -767,7 +767,12 @@ $(document).ready(function() {
           classTerm = 'topbox_embedded_web_video';
 
         if (video[1] == 'youtube') {
-          src = 'https://www.youtube.com/embed/' + video[4] + '?autoplay=1&amp;rel=0';
+          src = 'https://www.youtube.com/embed/' + video[3] + '?autoplay=1&amp;rel=0';
+          classTerm = 'topbox_youtube';
+        }
+
+        if (video[5] == 'embed') {
+          src = 'https://www.youtube.com/embed/' + video[6] + '?autoplay=1&amp;rel=0';
           classTerm = 'topbox_youtube';
         }
 
@@ -795,7 +800,7 @@ $(document).ready(function() {
             hspace: 0,
             scrolling: 'auto',
             allowfullscreen: 'true',
-            allow: 'autoplay; encrypted-media'
+            allow: 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
           });
           content.prepend(iframeVideo);
           $('iframe').wrap('<div class="topbox_embedded_web_video" id="player" />');
