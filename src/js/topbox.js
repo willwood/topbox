@@ -767,27 +767,17 @@ $(document).ready(function() {
           classTerm = 'topbox_embedded_web_video';
 
         if (video[1] == 'youtube') {
-          src = 'https://www.youtube.com/embed/' + video[3] + '?autoplay=1&amp;rel=0';
-          classTerm = 'topbox_youtube';
-        }
-
-        if (video[5] == 'embed') {
-          src = 'https://www.youtube.com/embed/' + video[6] + '?autoplay=1&amp;rel=0';
-          classTerm = 'topbox_youtube';
-        }
-
-        if (video[1] == 'youtube-nocookie') {
-          src = href; //https://www.youtube-nocookie.com/embed/...
+          src = 'https://www.youtube.com/embed/' + video[3] + '?autoplay=1&amp;rel=0&amp;playsinline=1';
           classTerm = 'topbox_youtube';
         }
 
         if (video[1] == 'youtu') {
-          src = 'https://www.youtube.com/embed/' + video[3] + '?autoplay=1&amp;rel=0';
+          src = 'https://www.youtube.com/embed/' + video[3] + '?autoplay=1&amp;rel=0&amp;playsinline=1';
           classTerm = 'topbox_youtube';
         }
 
         if (video[1] == 'vimeo') {
-          src = 'https://player.vimeo.com/video/' + video[3] + '?autoplay=1&amp;rel=0&amp;playsinline=0';
+          src = 'https://player.vimeo.com/video/' + video[3] + '?autoplay=1&amp;rel=0&amp;playsinline=1';
           classTerm = 'topbox_vimeo';
         }
 
@@ -798,6 +788,7 @@ $(document).ready(function() {
             frameborder: 0,
             vspace: 0,
             hspace: 0,
+            playsinline: true,
             scrolling: 'auto',
             allowfullscreen: 'true',
             allow: 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
