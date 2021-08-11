@@ -424,10 +424,10 @@ $(document).ready(function() {
 				When the lightbox is opened, the webpage will no longer scroll. Scrolling resumes again, when the lightbox is closed.
 			</p>
 
-			<p><strong id="trigger-from-url-hash">Trigger from a URL hash</strong><br>Make a TopBox open on page load via a 'hash' in the page URL. Add this jQuery within your <code>(document).ready</code> handler:
+			<p><strong id="trigger-from-url-hash">Trigger from a URL hash</strong><br>Make a TopBox open on page load via a 'hash' in the page URL. Add this jQuery within your <code>$(window).on("load", function ()</code> handler:
 				<pre><code>if(window.location.hash) {
 	var hashValue = location.hash.replace(/^#/, '');
-	$("." +hashValue).click();
+	$("." +hashValue).trigger('click');
 }</code></pre>
 				For example, https://example.com/#mountain would do a 'virtual' click on the TopBox link that has a class of <code>mountain</code> applied to itself.
 			</p>
